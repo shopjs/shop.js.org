@@ -1,36 +1,32 @@
 require 'shortcake'
 
+use 'cake-bundle'
+use 'cake-linked'
+use 'cake-outdated'
 use 'cake-test'
 use 'cake-version'
+use 'cake-yarn'
+
 use 'cake-publish',
   deploy:
     remote:  'origin'
     refspec: 'master:master'
   npm: false
-use 'cake-yarn'
 
 task 'build', 'build project', ['build:static', 'build:js']
 
-task 'build:js', 'build js', ['install'], do ->
-  handroll = require 'handroll'
+task 'build:js', 'build js',   ['yarn:install'], ->
+  return if (running 'build')
 
-  bundle = null
-
-  compile = (b) ->
-    bundle = b
-    bundle.write()
-
-  ->
-    return compile bundle if bundle?
-
-    handroll.bundle
-      entry:    'src/js/app.coffee'
-      dest:     'public/js/app.js'
-      format:   'web'
-      commonjs: true
-    .then compile
-    .catch (err) ->
-      console.error err
+  bundle.write
+    cache:    false
+    dest:     'public/js/app.js'
+    entry:    'src/js/app.coffee'
+    format:   'web'
+    commonjs: true
+    external: false
+  .catch (err) ->
+    console.error err
 
 task 'build:static', 'build static assets', ->
   exec '''
@@ -41,11 +37,11 @@ task 'build:static', 'build static assets', ->
 
 task 'watch', 'watch for changes and rebuild project', ['watch:js', 'watch:static']
 
-task 'watch:js', 'watch js for changes and rebuild', ['install'], ->
- build = (filename) ->
+task 'watch:js', 'watch js for changes and rebuild', ->
+  build = (filename) ->
     return if (running 'build')
     console.log filename, 'modified'
-    invoke 'build'
+    invoke 'build:js'
 
   watch 'src/*',          build
   watch 'node_modules/*', build
