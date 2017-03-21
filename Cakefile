@@ -25,6 +25,8 @@ task 'build:js', 'build js',   ['yarn:install'], ->
     format:   'web'
     commonjs: true
     external: false
+    legacy:
+      prismjs: 'Prism'
   .catch (err) ->
     console.error err
 
