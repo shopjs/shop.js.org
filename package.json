@@ -34,7 +34,7 @@
   "dependencies": {
     "debounce": "1.0.0",
     "prismjs": "1.6.0",
-    "shop.js": "2.0.1"
+    "shop.js": "2.0.2"
   },
   "repository": "ssh://github.com/hanzo-io/shop.js-site",
   "private": true
