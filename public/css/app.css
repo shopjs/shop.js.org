@@ -376,7 +376,11 @@ body{
 }
 body .hero,
 body .full{
-  height:110vh;
+  height:105vh;
+  min-height:600px;
+}
+body pre[class*="language-"]{
+  margin:0;
 }
 
 code[class*="language-"],
@@ -491,9 +495,8 @@ pre[class*="language-"]{
 }
 
 #page-index #hero .title{
-  margin-top:60vh;
-  -webkit-transform:translateY(-50%);
-          transform:translateY(-50%);
+  -webkit-transform:translateY(52.5vh) translateY(-50%);
+          transform:translateY(52.5vh) translateY(-50%);
 }
 #page-index #hero h1{
   display:inline-block;
