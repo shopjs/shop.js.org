@@ -39,7 +39,7 @@ task 'build:static', 'build static assets', ->
     bebop compile'
   '''
 
-task 'watch', 'watch for changes and rebuild project', ['watch:js', 'watch:static']
+task 'watch', 'watch for changes and rebuild project', ['build', 'watch:js', 'watch:static']
 
 task 'watch:js', 'watch js for changes and rebuild', ->
   build = (filename) ->
