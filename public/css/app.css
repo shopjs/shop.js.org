@@ -368,19 +368,655 @@ header nav.buttons .button{
             transform:translateY(-5px);
   }
 }
-body{
-  color:#fff;
-  background:-webkit-linear-gradient(#2e4057, #011638);
-  background:linear-gradient(#2e4057, #011638);
-  min-height:100vh;
+cart .selectize-input,
+checkout .selectize-input,
+checkout-card .selectize-input,
+checkout-shippingaddress .selectize-input,
+login .selectize-input,
+orders .selectize-input,
+profile .selectize-input,
+register .selectize-input,
+reset-password .selectize-input,
+reset-password-complete .selectize-input,
+shippingaddress .selectize-input{
+  background-color:transparent !important;
+  font-weight:bold !important;
+  color:#fff !important;
+  font-size:1rem !important;
+  line-height:1rem !important;
+  padding:8px 0 !important;
+  box-shadow:none !important;
+  border:0 !important;
+  border-bottom:2px solid $borderColor1 !important;
+  max-width:100%;
+  border-radius:0 !important;
+  height:2em !important;
 }
-body .hero,
-body .full{
-  height:105vh;
-  min-height:600px;
+cart .selectize-input:after,
+checkout .selectize-input:after,
+checkout-card .selectize-input:after,
+checkout-shippingaddress .selectize-input:after,
+login .selectize-input:after,
+orders .selectize-input:after,
+profile .selectize-input:after,
+register .selectize-input:after,
+reset-password .selectize-input:after,
+reset-password-complete .selectize-input:after,
+shippingaddress .selectize-input:after{
+  border-color:#000 transparent transparent !important;
+  top:12px;
+  right:8px;
+  margin-top:0px;
 }
-body pre[class*="language-"]{
-  margin:0;
+cart .selectize-input.dropdown-active:before,
+checkout .selectize-input.dropdown-active:before,
+checkout-card .selectize-input.dropdown-active:before,
+checkout-shippingaddress .selectize-input.dropdown-active:before,
+login .selectize-input.dropdown-active:before,
+orders .selectize-input.dropdown-active:before,
+profile .selectize-input.dropdown-active:before,
+register .selectize-input.dropdown-active:before,
+reset-password .selectize-input.dropdown-active:before,
+reset-password-complete .selectize-input.dropdown-active:before,
+shippingaddress .selectize-input.dropdown-active:before{
+  display:none !important;
+}
+cart .selectize-input.dropdown-active:after,
+checkout .selectize-input.dropdown-active:after,
+checkout-card .selectize-input.dropdown-active:after,
+checkout-shippingaddress .selectize-input.dropdown-active:after,
+login .selectize-input.dropdown-active:after,
+orders .selectize-input.dropdown-active:after,
+profile .selectize-input.dropdown-active:after,
+register .selectize-input.dropdown-active:after,
+reset-password .selectize-input.dropdown-active:after,
+reset-password-complete .selectize-input.dropdown-active:after,
+shippingaddress .selectize-input.dropdown-active:after{
+  border-color:transparent transparent #000 !important;
+}
+cart .selectize-input.full,
+checkout .selectize-input.full,
+checkout-card .selectize-input.full,
+checkout-shippingaddress .selectize-input.full,
+login .selectize-input.full,
+orders .selectize-input.full,
+profile .selectize-input.full,
+register .selectize-input.full,
+reset-password .selectize-input.full,
+reset-password-complete .selectize-input.full,
+shippingaddress .selectize-input.full{
+  min-height:0 !important;
+}
+cart .selectize-input input,
+checkout .selectize-input input,
+checkout-card .selectize-input input,
+checkout-shippingaddress .selectize-input input,
+login .selectize-input input,
+orders .selectize-input input,
+profile .selectize-input input,
+register .selectize-input input,
+reset-password .selectize-input input,
+reset-password-complete .selectize-input input,
+shippingaddress .selectize-input input{
+  position:absolute !important;
+  width:100% !important;
+  margin-top:-6px !important;
+  left:0;
+  height:2em !important;
+  top:1px !important;
+  padding:0 $inputHPadding;
+}
+cart .selectize-input .item,
+checkout .selectize-input .item,
+checkout-card .selectize-input .item,
+checkout-shippingaddress .selectize-input .item,
+login .selectize-input .item,
+orders .selectize-input .item,
+profile .selectize-input .item,
+register .selectize-input .item,
+reset-password .selectize-input .item,
+reset-password-complete .selectize-input .item,
+shippingaddress .selectize-input .item{
+  position:absolute !important;
+  font-size:1em;
+  font-weight:400;
+  color:#000;
+}
+cart .selectize-dropdown.single,
+checkout .selectize-dropdown.single,
+checkout-card .selectize-dropdown.single,
+checkout-shippingaddress .selectize-dropdown.single,
+login .selectize-dropdown.single,
+orders .selectize-dropdown.single,
+profile .selectize-dropdown.single,
+register .selectize-dropdown.single,
+reset-password .selectize-dropdown.single,
+reset-password-complete .selectize-dropdown.single,
+shippingaddress .selectize-dropdown.single{
+  border-radius:0 !important;
+  z-index:100001;
+  border:0;
+}
+cart .selectize-dropdown.single .selectize-dropdown-content,
+checkout .selectize-dropdown.single .selectize-dropdown-content,
+checkout-card .selectize-dropdown.single .selectize-dropdown-content,
+checkout-shippingaddress .selectize-dropdown.single .selectize-dropdown-content,
+login .selectize-dropdown.single .selectize-dropdown-content,
+orders .selectize-dropdown.single .selectize-dropdown-content,
+profile .selectize-dropdown.single .selectize-dropdown-content,
+register .selectize-dropdown.single .selectize-dropdown-content,
+reset-password .selectize-dropdown.single .selectize-dropdown-content,
+reset-password-complete .selectize-dropdown.single .selectize-dropdown-content,
+shippingaddress .selectize-dropdown.single .selectize-dropdown-content{
+  font-weight:400 !important;
+  color:#fff !important;
+  font-size:1rem !important;
+  line-height:1rem !important;
+}
+cart .selectize-dropdown.single .option.active,
+checkout .selectize-dropdown.single .option.active,
+checkout-card .selectize-dropdown.single .option.active,
+checkout-shippingaddress .selectize-dropdown.single .option.active,
+login .selectize-dropdown.single .option.active,
+orders .selectize-dropdown.single .option.active,
+profile .selectize-dropdown.single .option.active,
+register .selectize-dropdown.single .option.active,
+reset-password .selectize-dropdown.single .option.active,
+reset-password-complete .selectize-dropdown.single .option.active,
+shippingaddress .selectize-dropdown.single .option.active{
+  background-color:$selectActiveBackgroundColor1 !important;
+  color:$selectActiveColor1 !important;
+}
+cart .selectize-control,
+checkout .selectize-control,
+checkout-card .selectize-control,
+checkout-shippingaddress .selectize-control,
+login .selectize-control,
+orders .selectize-control,
+profile .selectize-control,
+register .selectize-control,
+reset-password .selectize-control,
+reset-password-complete .selectize-control,
+shippingaddress .selectize-control{
+  height:2em;
+}
+cart,
+checkout,
+checkout-card,
+checkout-shippingaddress,
+login,
+orders,
+profile,
+register,
+reset-password,
+reset-password-complete,
+shippingaddress{
+  color:#000;
+}
+cart *:disabled,
+checkout *:disabled,
+checkout-card *:disabled,
+checkout-shippingaddress *:disabled,
+login *:disabled,
+orders *:disabled,
+profile *:disabled,
+register *:disabled,
+reset-password *:disabled,
+reset-password-complete *:disabled,
+shippingaddress *:disabled,
+cart .disabled,
+checkout .disabled,
+checkout-card .disabled,
+checkout-shippingaddress .disabled,
+login .disabled,
+orders .disabled,
+profile .disabled,
+register .disabled,
+reset-password .disabled,
+reset-password-complete .disabled,
+shippingaddress .disabled{
+  opacity:0.5;
+}
+cart input,
+checkout input,
+checkout-card input,
+checkout-shippingaddress input,
+login input,
+orders input,
+profile input,
+register input,
+reset-password input,
+reset-password-complete input,
+shippingaddress input{
+  outline:none;
+  border:0;
+  background:transparent;
+}
+cart input:-moz-placeholder,
+checkout input:-moz-placeholder,
+checkout-card input:-moz-placeholder,
+checkout-shippingaddress input:-moz-placeholder,
+login input:-moz-placeholder,
+orders input:-moz-placeholder,
+profile input:-moz-placeholder,
+register input:-moz-placeholder,
+reset-password input:-moz-placeholder,
+reset-password-complete input:-moz-placeholder,
+shippingaddress input:-moz-placeholder{
+  color:$themeTextColor1;
+}
+cart input::-moz-placeholder,
+checkout input::-moz-placeholder,
+checkout-card input::-moz-placeholder,
+checkout-shippingaddress input::-moz-placeholder,
+login input::-moz-placeholder,
+orders input::-moz-placeholder,
+profile input::-moz-placeholder,
+register input::-moz-placeholder,
+reset-password input::-moz-placeholder,
+reset-password-complete input::-moz-placeholder,
+shippingaddress input::-moz-placeholder{
+  color:$themeTextColor1;
+}
+cart input:-ms-input-placeholder,
+checkout input:-ms-input-placeholder,
+checkout-card input:-ms-input-placeholder,
+checkout-shippingaddress input:-ms-input-placeholder,
+login input:-ms-input-placeholder,
+orders input:-ms-input-placeholder,
+profile input:-ms-input-placeholder,
+register input:-ms-input-placeholder,
+reset-password input:-ms-input-placeholder,
+reset-password-complete input:-ms-input-placeholder,
+shippingaddress input:-ms-input-placeholder{
+  color:$themeTextColor1;
+}
+cart input::-webkit-input-placeholder,
+checkout input::-webkit-input-placeholder,
+checkout-card input::-webkit-input-placeholder,
+checkout-shippingaddress input::-webkit-input-placeholder,
+login input::-webkit-input-placeholder,
+orders input::-webkit-input-placeholder,
+profile input::-webkit-input-placeholder,
+register input::-webkit-input-placeholder,
+reset-password input::-webkit-input-placeholder,
+reset-password-complete input::-webkit-input-placeholder,
+shippingaddress input::-webkit-input-placeholder{
+  color:$themeTextColor1;
+}
+cart .input,
+checkout .input,
+checkout-card .input,
+checkout-shippingaddress .input,
+login .input,
+orders .input,
+profile .input,
+register .input,
+reset-password .input,
+reset-password-complete .input,
+shippingaddress .input{
+  width:100%;
+  display:block;
+}
+cart .input:not(:last-child),
+checkout .input:not(:last-child),
+checkout-card .input:not(:last-child),
+checkout-shippingaddress .input:not(:last-child),
+login .input:not(:last-child),
+orders .input:not(:last-child),
+profile .input:not(:last-child),
+register .input:not(:last-child),
+reset-password .input:not(:last-child),
+reset-password-complete .input:not(:last-child),
+shippingaddress .input:not(:last-child){
+  margin-bottom:$elementVSpacing;
+}
+cart .input input[type=text],
+checkout .input input[type=text],
+checkout-card .input input[type=text],
+checkout-shippingaddress .input input[type=text],
+login .input input[type=text],
+orders .input input[type=text],
+profile .input input[type=text],
+register .input input[type=text],
+reset-password .input input[type=text],
+reset-password-complete .input input[type=text],
+shippingaddress .input input[type=text],
+cart .input input[type=password],
+checkout .input input[type=password],
+checkout-card .input input[type=password],
+checkout-shippingaddress .input input[type=password],
+login .input input[type=password],
+orders .input input[type=password],
+profile .input input[type=password],
+register .input input[type=password],
+reset-password .input input[type=password],
+reset-password-complete .input input[type=password],
+shippingaddress .input input[type=password]{
+  width:100%;
+  height:2em;
+  font-size:1em;
+  border-bottom:$inputBorderWidth solid #000;
+}
+cart .error-message,
+checkout .error-message,
+checkout-card .error-message,
+checkout-shippingaddress .error-message,
+login .error-message,
+orders .error-message,
+profile .error-message,
+register .error-message,
+reset-password .error-message,
+reset-password-complete .error-message,
+shippingaddress .error-message,
+cart .error,
+checkout .error,
+checkout-card .error,
+checkout-shippingaddress .error,
+login .error,
+orders .error,
+profile .error,
+register .error,
+reset-password .error,
+reset-password-complete .error,
+shippingaddress .error{
+  color:$errorColor;
+}
+cart .button,
+checkout .button,
+checkout-card .button,
+checkout-shippingaddress .button,
+login .button,
+orders .button,
+profile .button,
+register .button,
+reset-password .button,
+reset-password-complete .button,
+shippingaddress .button,
+cart button,
+checkout button,
+checkout-card button,
+checkout-shippingaddress button,
+login button,
+orders button,
+profile button,
+register button,
+reset-password button,
+reset-password-complete button,
+shippingaddress button{
+  background-color:transparent;
+  border-color:#000;
+  color:#000;
+  text-align:center;
+  line-height:2em;
+  font-size:1em;
+  cursor:pointer;
+}
+cart .button.submit,
+checkout .button.submit,
+checkout-card .button.submit,
+checkout-shippingaddress .button.submit,
+login .button.submit,
+orders .button.submit,
+profile .button.submit,
+register .button.submit,
+reset-password .button.submit,
+reset-password-complete .button.submit,
+shippingaddress .button.submit,
+cart button.submit,
+checkout button.submit,
+checkout-card button.submit,
+checkout-shippingaddress button.submit,
+login button.submit,
+orders button.submit,
+profile button.submit,
+register button.submit,
+reset-password button.submit,
+reset-password-complete button.submit,
+shippingaddress button.submit,
+cart .button[type=submit],
+checkout .button[type=submit],
+checkout-card .button[type=submit],
+checkout-shippingaddress .button[type=submit],
+login .button[type=submit],
+orders .button[type=submit],
+profile .button[type=submit],
+register .button[type=submit],
+reset-password .button[type=submit],
+reset-password-complete .button[type=submit],
+shippingaddress .button[type=submit],
+cart button[type=submit],
+checkout button[type=submit],
+checkout-card button[type=submit],
+checkout-shippingaddress button[type=submit],
+login button[type=submit],
+orders button[type=submit],
+profile button[type=submit],
+register button[type=submit],
+reset-password button[type=submit],
+reset-password-complete button[type=submit],
+shippingaddress button[type=submit]{
+  background-color:transparent;
+  border-color:#000;
+  color:#000;
+}
+cart{
+  line-height:1.8em;
+  width:100%;
+  max-width:400px;
+  display:table;
+}
+cart h1 .expand-summary{
+  display:block;
+  position:relative;
+  top:1px;
+  left:4px;
+  z-index:2;
+  width:16px;
+  height:16px;
+  display:none;
+}
+cart lineitems,
+cart lineitem{
+  width:100%;
+  position:relative;
+  display:block;
+}
+cart lineitems{
+  padding-bottom:20px;
+}
+cart lineitem{
+  display:table;
+}
+cart lineitem > div{
+  width:100%;
+}
+cart lineitem > *{
+  float:left;
+}
+cart lineitem > * > *{
+  float:left;
+}
+cart quantity-select-control,
+cart .promo,
+cart .promo-row,
+cart .invoice-line{
+  width:100%;
+  display:table;
+  position:relative;
+}
+cart quantity-select-control .selectize-input{
+  max-width:60px;
+}
+cart .product-quantity-container{
+  width:45px !important;
+  display:inline-block;
+  margin-top:-3px;
+  float:right !important;
+}
+cart .product-quantity-container .item{
+  left:9px;
+}
+cart .product-price-container{
+  margin-right:20px;
+}
+cart .product-description{
+  line-height:1.25em;
+  padding-top:3px;
+  padding-left:8px;
+  display:inline-block;
+  vertical-align:top;
+  width:90%;
+}
+cart .product-description .product-name{
+  font-weight:bold;
+  display:block;
+}
+cart .product-description > *:last-child{
+  font-size:12px;
+  line-height:1.2rem;
+  margin-top:0;
+}
+cart .product-image-container{
+  width:15%;
+  position:relative;
+}
+cart .product-image-container img:nth-child(n+2){
+  position:absolute;
+  width:100%;
+  top:0;
+  left:0;
+}
+cart .product-text-container{
+  width:43%;
+}
+cart .product-price-container{
+  line-height:1.25em;
+  width:22%;
+  text-align:right;
+  float:right !important;
+  margin-top:3px;
+}
+cart .product-list-price{
+  color:#f22469;
+  font-size:0.9em;
+}
+cart .product-slug{
+  display:none;
+}
+cart .product-delete{
+  cursor:pointer;
+  width:20%;
+  float:right !important;
+  text-align:right;
+  font-size:0.8em;
+  position:absolute;
+  right:0;
+  top:1.5rem;
+}
+cart .product-currency{
+  display:inline;
+}
+cart .product-list-price{
+  text-decoration:line-through;
+}
+cart .promo.promo{
+  height:40px;
+}
+cart .promo.promo > *{
+  vertical-align:middle;
+  display:table-cell;
+}
+cart .promo.promo > div:first-child{
+  width:40%;
+}
+cart .promo.promo > div:nth-child(2){
+  width:60%;
+}
+cart .promo.promo .promo-row > *{
+  float:left;
+}
+cart .promo.promo .promo-row promocode{
+  width:75%;
+  padding:0;
+}
+cart .promo.promo .promo-row promocode input{
+  border-right:0;
+  border-radius:22px 0 0 22px;
+  background-color:transparent;
+  border-width:2px !important;
+  padding:0 15px;
+  -webkit-transition:border-color 420ms ease-in-out, color 420ms ease-in-out;
+  transition:border-color 420ms ease-in-out, color 420ms ease-in-out;
+  height:32px;
+}
+cart .promo.promo .promo-row button{
+  position:relative;
+  width:25%;
+  border-radius:0 22px 22px 0;
+  border-width:0;
+  font-size:1em;
+  padding:0;
+  -webkit-transition:background-color 420ms ease-in-out;
+  transition:background-color 420ms ease-in-out;
+  top:1px;
+  height:32px;
+}
+cart .promo.promo .promo-row button span:last-child{
+  display:none;
+}
+cart .promo.promo .promo-row button.notify{
+  -webkit-animation:ripple-black 1.5s infinite;
+          animation:ripple-black 1.5s infinite;
+}
+cart .promo.promo .promo-row.green promocode input{
+  border-color:#75dbcd !important;
+  color:#75dbcd !important;
+}
+cart .promo.promo .promo-row.green button{
+  background-color:#75dbcd !important;
+}
+cart .promo.promo .promo-row.red promocode input{
+  border-color:#f22469 !important;
+  color:#f22469 !important;
+}
+cart .promo.promo .promo-row.red button{
+  background-color:#f22469 !important;
+}
+cart .promo.promo .promo-row.red button span:first-child{
+  display:none;
+}
+cart .promo.promo .promo-row.red button span:last-child{
+  display:block;
+}
+cart .promo.promo .promo-message{
+  text-align:right !important;
+}
+cart .invoice-line{
+  height:40px;
+}
+cart .invoice-line > *{
+  vertical-align:middle;
+  display:table-cell;
+}
+cart .invoice-line > div:first-child{
+  width:70%;
+  padding-right:5%;
+}
+cart .invoice-line > div:last-child{
+  width:30%;
+}
+cart .invoice-total{
+  font-weight:bold;
+  font-size:1.1em;
+}
+cart .invoice-total .invoice-label{
+  font-size:1.25em;
+  text-align:left;
+}
+cart .invoice-amount{
+  text-align:right;
+  font-weight:bold;
 }
 
 code[class*="language-"],
@@ -494,6 +1130,20 @@ pre[class*="language-"]{
 	cursor:help;
 }
 
+body{
+  color:#fff;
+  background:-webkit-linear-gradient(#2e4057, #011638);
+  background:linear-gradient(#2e4057, #011638);
+  min-height:100vh;
+}
+body .hero,
+body .full{
+  height:105vh;
+  min-height:600px;
+}
+body pre[class*="language-"]{
+  margin:0;
+}
 #page-index #hero .title{
   -webkit-transform:translateY(52.5vh) translateY(-50%);
           transform:translateY(52.5vh) translateY(-50%);
@@ -515,5 +1165,19 @@ pre[class*="language-"]{
 
   .hero{
     min-height:400px;
+  }
+
+  cart .product-description{
+    font-size:0.8em;
+  }
+
+  cart .product-description > *:last-child{
+    font-size:0.8em;
+  }
+}
+@media only screen and (max-width: 375px){
+
+  cart .product-description{
+    font-size:0.7em;
   }
 }/*# sourceMappingURL=app.css.map */

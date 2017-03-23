@@ -1,0 +1,68 @@
+cart
+checkout
+checkout-card
+checkout-shippingaddress
+login
+orders
+profile
+register
+reset-password
+reset-password-complete
+shippingaddress
+  color: $themeTextColor
+
+  *:disabled
+  .disabled
+    opacity: 0.5
+
+  input
+    outline: none
+    border: 0
+    background: transparent
+
+    &:-moz-placeholder
+      color: $themeTextColor1
+
+    &::-moz-placeholder
+      color: $themeTextColor1
+
+    &:-ms-input-placeholder
+      color: $themeTextColor1
+
+    &::-webkit-input-placeholder
+      color: $themeTextColor1
+
+  .input
+    width: 100%
+    display: block
+
+    &:not(:last-child)
+      margin-bottom: $elementVSpacing
+
+    input[type=text]
+    input[type=password]
+      width: 100%
+      height: $elementHeight
+      font-size: 1em
+      border-bottom: $inputBorderWidth solid $themeBorderColor
+
+  .error-message
+  .error
+    color: $errorColor
+
+  .button
+  button
+    background-color: $themeButtonBGColor
+    border-color: $themeButtonBorderColor
+    color: $themeButtonColor
+    text-align: center
+    line-height: $elementHeight
+    font-size: 1em
+    cursor: pointer
+
+    &.submit
+    &[type=submit]
+      background-color: $themeButtonBGColor
+      border-color: $themeButtonBorderColor
+      color: $themeButtonColor
+

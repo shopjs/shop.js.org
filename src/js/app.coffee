@@ -26,4 +26,4 @@ $('.example1 code').html html
 $document = $(document)
 $document.ready ->
   Shop = initShop()
-
+  Shop.setItem 'red-shirt', 1
