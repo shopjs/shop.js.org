@@ -13,3 +13,5 @@ export default ->
       Error: '' + '<div class="error" if="{ errorMessage }">' + '  { errorMessage }' + '</div>'
   m = window.m = Shop.start(settings)
   window.client = Shop.client
+
+  return Shop

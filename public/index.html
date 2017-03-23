@@ -50,10 +50,40 @@
             <h4><strong>One Library For All Your Ecommerce Needs</strong></h4>
             <p>Cosmic fugue rich in mystery, great turbulent clouds Orion's sword. Consciousness, star stuff harvesting star light the only home we've ever known muse about, culture permanence of the stars, Apollonius of Perga white dwarf. Euclid, rich in heavy atoms kindling the energy hidden in matter culture circumnavigated birth rogue cosmic ocean concept of the number one? At the edge of forever paroxysm of global death star stuff harvesting star light, Orion's sword tendrils of gossamer clouds are creatures of the cosmos hearts of the stars. Finite but unbounded. A mote of dust suspended in a sunbeam birth.</p>
           </div>
-          <div class="content"><a class="pre-order-button button" href="#"><span>Try Now</span></a></div>
+          <!-- .content-->
+          <!--   a.pre-order-button.button(href='#')-->
+          <!--     span Try Now-->
         </section>
         <section class="full example1">
           <pre><code class="language-html"></code></pre>
+          <cart>
+            <h1 if="{ !isEmpty() }">Your Cart</h1>
+            <h1 if="{ isEmpty() }">Your Cart Is Empty</h1>
+            <lineitems if="{ !isEmpty() }">
+              <div class="animated fadeIn">
+                <div class="product-image-container"></div>
+                <div class="product-text-container"><span class="product-description"><span class="product-name">{ data.get('productName') }</span>
+                    <p>{ data.get('description') }</p></span></div><span class="product-quantity-container locked" if="{ data.get('locked') }">{ data.get('quantity') }</span><span class="product-quantity-container" if="{ !data.get('locked') }">
+                  <quantity-select-control></quantity-select-control></span>
+                <div class="product-delete" onclick="{ delete }">Remove</div>
+                <div class="product-price-container invoice-amount">
+                  <div class="product-price">{ renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) } { parentData.get('currency').toUpperCase() }</div>
+                  <div class="product-list-price invoice-amount" if="{ data.get().listPrice &gt; data.get().price }">{ renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) } { parentData.get('currency').toUpperCase() }</div>
+                </div>
+              </div>
+            </lineitems>
+            <div if="{ !isEmpty() }">
+              <div class="invoice-line invoice-total">
+                <div class="invoice-label">Subtotal</div>
+                <div class="invoice-amount">{ renderCurrency(data.get('order.currency'), data.get('order.subtotal'))} { data.get('order.currency').toUpperCase() }</div>
+              </div>
+              <!-- a.button.submit(href='/checkout')-->
+              <!--   | Checkout-->
+            </div>
+            <!-- div(if='{ isEmpty() }')-->
+            <!--   a.button.submit(href='/')-->
+            <!--     | Continue Shopping-->
+          </cart>
         </section>
       </div>
     </main>
