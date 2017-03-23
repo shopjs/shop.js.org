@@ -24,5 +24,6 @@ html = Prism.highlight test, Prism.languages.html
 $('.example1 code').html html
 
 $document = $(document)
-$document.ready initShop
+$document.ready ->
+  Shop = initShop()
 
