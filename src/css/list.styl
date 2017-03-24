@@ -1,0 +1,65 @@
+.list
+  width 100vw
+  height 100vh
+  min-height 600px
+  box-sizing border-box
+  padding 40px 0
+  .info
+    box-sizing border-box
+    ul
+      list-style-type none
+      overflow hidden
+      padding 0
+      li
+        float left
+        display table
+        *
+          display table-cell
+          vertical-align middle
+  &.bottom
+    .image
+      width 100%
+      height 100%
+      position absolute
+      top 0
+      left 0
+    .info
+      display block
+      position absolute
+      bottom 0
+      margin-bottom 30px
+      width 100%
+
+.list.right, .list.left
+  padding 0px
+
+.list.left .image, .list.left .info
+  float right
+  min-height 600px
+
+.list.right .image, .list.right .info
+  float left
+  min-height 600px
+
+.list.right .image, .list.left .image
+  width 45%
+  height 100%
+  box-sizing border-box
+
+.list.left .info, .list.right .info
+  width 55%
+  height 100%
+  padding 40px
+  text-align left
+  max-width 600px
+
++below(800px)
+  .list.right .image, .list.left .image, .list.right .info, .list.left .info
+    width 100%
+    height 100%
+    max-width 800px
+
+  .list.left .info, .list.right .info
+    height 100%
+
+

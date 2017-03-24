@@ -110,9 +110,9 @@ h1,
 h2,
 h3,
 h4{
-  margin:1.414em 0 0.5em;
+  margin:0.5em 0;
   font-weight:inherit;
-  line-height:1.2;
+  line-height:1.2em;
   font-weight:200;
 }
 h1{
@@ -368,6 +368,71 @@ header nav.buttons .button{
             transform:translateY(-5px);
   }
 }
+.list{
+  width:100vw;
+  height:100vh;
+  min-height:600px;
+  box-sizing:border-box;
+  padding:40px 0;
+}
+.list .info{
+  box-sizing:border-box;
+}
+.list .info ul{
+  list-style-type:none;
+  overflow:hidden;
+  padding:0;
+}
+.list .info ul li{
+  float:left;
+  display:table;
+}
+.list .info ul li *{
+  display:table-cell;
+  vertical-align:middle;
+}
+.list.bottom .image{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.list.bottom .info{
+  display:block;
+  position:absolute;
+  bottom:0;
+  margin-bottom:30px;
+  width:100%;
+}
+.list.right,
+.list.left{
+  padding:0px;
+}
+.list.left .image,
+.list.left .info{
+  float:right;
+  min-height:600px;
+}
+.list.right .image,
+.list.right .info{
+  float:left;
+  min-height:600px;
+}
+.list.right .image,
+.list.left .image{
+  width:45%;
+  height:100%;
+  box-sizing:border-box;
+}
+.list.left .info,
+.list.right .info{
+  width:55%;
+  height:100%;
+  padding:40px;
+  text-align:left;
+  max-width:600px;
+}
 cart .selectize-input,
 checkout .selectize-input,
 checkout-card .selectize-input,
@@ -390,7 +455,7 @@ shippingaddress .selectize-input{
   border-bottom:2px solid $borderColor1 !important;
   max-width:100%;
   border-radius:0 !important;
-  height:2em !important;
+  height:2rem !important;
 }
 cart .selectize-input:after,
 checkout .selectize-input:after,
@@ -405,8 +470,8 @@ reset-password-complete .selectize-input:after,
 shippingaddress .selectize-input:after{
   border-color:#000 transparent transparent !important;
   top:12px;
-  right:8px;
-  margin-top:0px;
+  right:0 !important;
+  margin-top:0;
 }
 cart .selectize-input.dropdown-active:before,
 checkout .selectize-input.dropdown-active:before,
@@ -462,7 +527,7 @@ shippingaddress .selectize-input input{
   width:100% !important;
   margin-top:-6px !important;
   left:0;
-  height:2em !important;
+  height:2rem !important;
   top:1px !important;
   padding:0 $inputHPadding;
 }
@@ -538,7 +603,7 @@ register .selectize-control,
 reset-password .selectize-control,
 reset-password-complete .selectize-control,
 shippingaddress .selectize-control{
-  height:2em;
+  height:2rem;
 }
 cart,
 checkout,
@@ -603,7 +668,7 @@ register input:-moz-placeholder,
 reset-password input:-moz-placeholder,
 reset-password-complete input:-moz-placeholder,
 shippingaddress input:-moz-placeholder{
-  color:$themeTextColor1;
+  color:#000;
 }
 cart input::-moz-placeholder,
 checkout input::-moz-placeholder,
@@ -616,7 +681,7 @@ register input::-moz-placeholder,
 reset-password input::-moz-placeholder,
 reset-password-complete input::-moz-placeholder,
 shippingaddress input::-moz-placeholder{
-  color:$themeTextColor1;
+  color:#000;
 }
 cart input:-ms-input-placeholder,
 checkout input:-ms-input-placeholder,
@@ -629,7 +694,7 @@ register input:-ms-input-placeholder,
 reset-password input:-ms-input-placeholder,
 reset-password-complete input:-ms-input-placeholder,
 shippingaddress input:-ms-input-placeholder{
-  color:$themeTextColor1;
+  color:#000;
 }
 cart input::-webkit-input-placeholder,
 checkout input::-webkit-input-placeholder,
@@ -642,7 +707,7 @@ register input::-webkit-input-placeholder,
 reset-password input::-webkit-input-placeholder,
 reset-password-complete input::-webkit-input-placeholder,
 shippingaddress input::-webkit-input-placeholder{
-  color:$themeTextColor1;
+  color:#000;
 }
 cart .input,
 checkout .input,
@@ -657,19 +722,6 @@ reset-password-complete .input,
 shippingaddress .input{
   width:100%;
   display:block;
-}
-cart .input:not(:last-child),
-checkout .input:not(:last-child),
-checkout-card .input:not(:last-child),
-checkout-shippingaddress .input:not(:last-child),
-login .input:not(:last-child),
-orders .input:not(:last-child),
-profile .input:not(:last-child),
-register .input:not(:last-child),
-reset-password .input:not(:last-child),
-reset-password-complete .input:not(:last-child),
-shippingaddress .input:not(:last-child){
-  margin-bottom:$elementVSpacing;
 }
 cart .input input[type=text],
 checkout .input input[type=text],
@@ -694,9 +746,11 @@ reset-password .input input[type=password],
 reset-password-complete .input input[type=password],
 shippingaddress .input input[type=password]{
   width:100%;
-  height:2em;
+  height:2rem;
   font-size:1em;
-  border-bottom:$inputBorderWidth solid #000;
+  border-bottom:1px solid;
+  border-color:#000;
+  border-width:1px;
 }
 cart .error-message,
 checkout .error-message,
@@ -744,12 +798,14 @@ register button,
 reset-password button,
 reset-password-complete button,
 shippingaddress button{
-  background-color:transparent;
+  background-color:#0091ea;
   border-color:#000;
-  color:#000;
+  color:#fff;
   text-align:center;
-  line-height:2em;
   font-size:1em;
+  padding:0;
+  height:3rem;
+  padding:0 2rem;
   cursor:pointer;
 }
 cart .button.submit,
@@ -796,17 +852,47 @@ register button[type=submit],
 reset-password button[type=submit],
 reset-password-complete button[type=submit],
 shippingaddress button[type=submit]{
-  background-color:transparent;
+  background-color:#0091ea;
   border-color:#000;
-  color:#000;
+  color:#fff;
+  line-height:2rem;
+  width:100%;
+}
+cart input,
+checkout input,
+checkout-card input,
+checkout-shippingaddress input,
+login input,
+orders input,
+profile input,
+register input,
+reset-password input,
+reset-password-complete input,
+shippingaddress input,
+cart button,
+checkout button,
+checkout-card button,
+checkout-shippingaddress button,
+login button,
+orders button,
+profile button,
+register button,
+reset-password button,
+reset-password-complete button,
+shippingaddress button{
+  outline:none;
 }
 cart{
-  line-height:1.8em;
   width:100%;
-  max-width:400px;
   display:table;
+  padding:20px;
+  background-color:#eee;
 }
-cart h1 .expand-summary{
+cart h2{
+  margin:0;
+  padding-bottom:20px;
+}
+cart h2 .expand-summary{
   display:block;
   position:relative;
   top:1px;
@@ -822,11 +908,9 @@ cart lineitem{
   position:relative;
   display:block;
 }
-cart lineitems{
-  padding-bottom:20px;
-}
 cart lineitem{
   display:table;
+  padding-bottom:20px;
 }
 cart lineitem > div{
   width:100%;
@@ -851,19 +935,17 @@ cart quantity-select-control .selectize-input{
 cart .product-quantity-container{
   width:45px !important;
   display:inline-block;
-  margin-top:-3px;
   float:right !important;
+  position:relative;
+  top:-8px;
+  margin-left:20px;
 }
 cart .product-quantity-container .item{
   left:9px;
 }
-cart .product-price-container{
-  margin-right:20px;
-}
 cart .product-description{
-  line-height:1.25em;
-  padding-top:3px;
-  padding-left:8px;
+  line-height:1em;
+  padding-left:20px;
   display:inline-block;
   vertical-align:top;
   width:90%;
@@ -878,24 +960,18 @@ cart .product-description > *:last-child{
   margin-top:0;
 }
 cart .product-image-container{
-  width:15%;
   position:relative;
 }
-cart .product-image-container img:nth-child(n+2){
-  position:absolute;
-  width:100%;
-  top:0;
-  left:0;
+cart .product-image-container img{
+  max-height:3.5em;
 }
 cart .product-text-container{
-  width:43%;
+  width:40%;
 }
 cart .product-price-container{
-  line-height:1.25em;
-  width:22%;
   text-align:right;
   float:right !important;
-  margin-top:3px;
+  line-height:1em;
 }
 cart .product-list-price{
   color:#f22469;
@@ -912,7 +988,7 @@ cart .product-delete{
   font-size:0.8em;
   position:absolute;
   right:0;
-  top:1.5rem;
+  top:1em;
 }
 cart .product-currency{
   display:inline;
@@ -941,10 +1017,9 @@ cart .promo.promo .promo-row promocode{
   padding:0;
 }
 cart .promo.promo .promo-row promocode input{
+  border-radius:1em 0 0 1em;
+  border:1px solid;
   border-right:0;
-  border-radius:22px 0 0 22px;
-  background-color:transparent;
-  border-width:2px !important;
   padding:0 15px;
   -webkit-transition:border-color 420ms ease-in-out, color 420ms ease-in-out;
   transition:border-color 420ms ease-in-out, color 420ms ease-in-out;
@@ -953,40 +1028,34 @@ cart .promo.promo .promo-row promocode input{
 cart .promo.promo .promo-row button{
   position:relative;
   width:25%;
-  border-radius:0 22px 22px 0;
+  border-radius:0 1em 1em 0;
   border-width:0;
   font-size:1em;
   padding:0;
   -webkit-transition:background-color 420ms ease-in-out;
   transition:background-color 420ms ease-in-out;
-  top:1px;
   height:32px;
+  background-color:#000;
+  color:#fff;
 }
-cart .promo.promo .promo-row button span:last-child{
-  display:none;
+cart .promo.promo .promo-row.applied promocode input{
+  border-color:#17bebb;
+  color:#17bebb !important;
 }
-cart .promo.promo .promo-row button.notify{
-  -webkit-animation:ripple-black 1.5s infinite;
-          animation:ripple-black 1.5s infinite;
+cart .promo.promo .promo-row.applied button{
+  background-color:#17bebb !important;
 }
-cart .promo.promo .promo-row.green promocode input{
-  border-color:#75dbcd !important;
-  color:#75dbcd !important;
-}
-cart .promo.promo .promo-row.green button{
-  background-color:#75dbcd !important;
-}
-cart .promo.promo .promo-row.red promocode input{
+cart .promo.promo .promo-row.failed promocode input{
   border-color:#f22469 !important;
   color:#f22469 !important;
 }
-cart .promo.promo .promo-row.red button{
+cart .promo.promo .promo-row.failed button{
   background-color:#f22469 !important;
 }
-cart .promo.promo .promo-row.red button span:first-child{
+cart .promo.promo .promo-row.failed button span:first-child{
   display:none;
 }
-cart .promo.promo .promo-row.red button span:last-child{
+cart .promo.promo .promo-row.failed button span:last-child{
   display:block;
 }
 cart .promo.promo .promo-message{
@@ -1009,6 +1078,7 @@ cart .invoice-line > div:last-child{
 cart .invoice-total{
   font-weight:bold;
   font-size:1.1em;
+  padding-bottom:20px;
 }
 cart .invoice-total .invoice-label{
   font-size:1.25em;
@@ -1132,8 +1202,8 @@ pre[class*="language-"]{
 
 body{
   color:#fff;
-  background:-webkit-linear-gradient(#2e4057, #011638);
-  background:linear-gradient(#2e4057, #011638);
+  background:-webkit-linear-gradient(#2e4057, #031211);
+  background:linear-gradient(#2e4057, #031211);
   min-height:100vh;
 }
 body .hero,
@@ -1143,6 +1213,22 @@ body .full{
 }
 body pre[class*="language-"]{
   margin:0;
+}
+body .list.list{
+  height:auto;
+}
+body .list.list .content{
+  display:table;
+  padding:0;
+}
+body .list.list .info{
+  padding:0;
+  padding-bottom:40px;
+  padding-right:40px;
+  min-height:0;
+}
+body .list.list .image{
+  min-height:0;
 }
 #page-index #hero .title{
   -webkit-transform:translateY(52.5vh) translateY(-50%);
@@ -1161,6 +1247,9 @@ body pre[class*="language-"]{
   background-image:url("/img/logo.png");
   background-size:contain;
 }
+#page-index .example1 cart{
+  max-width:400px;
+}
 @media only screen and (max-width: 400px){
 
   .hero{
@@ -1173,6 +1262,26 @@ body pre[class*="language-"]{
 
   cart .product-description > *:last-child{
     font-size:0.8em;
+  }
+}
+@media only screen and (max-width: 800px){
+
+  .list.right .image,
+  .list.left .image,
+  .list.right .info,
+  .list.left .info{
+    width:100%;
+    height:100%;
+    max-width:800px;
+  }
+
+  .list.left .info,
+  .list.right .info{
+    height:100%;
+  }
+
+  body .list.list .info{
+    padding-right:0px;
   }
 }
 @media only screen and (max-width: 375px){

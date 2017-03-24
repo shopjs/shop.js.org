@@ -21,30 +21,29 @@ shippingaddress
     background: transparent
 
     &:-moz-placeholder
-      color: $themeTextColor1
+      color: $themeTextColor
 
     &::-moz-placeholder
-      color: $themeTextColor1
+      color: $themeTextColor
 
     &:-ms-input-placeholder
-      color: $themeTextColor1
+      color: $themeTextColor
 
     &::-webkit-input-placeholder
-      color: $themeTextColor1
+      color: $themeTextColor
 
   .input
     width: 100%
     display: block
 
-    &:not(:last-child)
-      margin-bottom: $elementVSpacing
-
     input[type=text]
     input[type=password]
       width: 100%
-      height: $elementHeight
+      height: $themeElementHeight
       font-size: 1em
-      border-bottom: $inputBorderWidth solid $themeBorderColor
+      border-bottom: $themeInputBorderWidth solid
+      border-color: $themeBorderColor
+      border-width: $themeInputBorderWidth
 
   .error-message
   .error
@@ -56,8 +55,10 @@ shippingaddress
     border-color: $themeButtonBorderColor
     color: $themeButtonColor
     text-align: center
-    line-height: $elementHeight
     font-size: 1em
+    padding: 0
+    height: $themeElementHeight * 1.5
+    padding: 0 $themeElementHeight
     cursor: pointer
 
     &.submit
@@ -65,4 +66,10 @@ shippingaddress
       background-color: $themeButtonBGColor
       border-color: $themeButtonBorderColor
       color: $themeButtonColor
+      line-height: $themeElementHeight
+      width: 100%
+
+  input
+  button
+    outline: none
 
