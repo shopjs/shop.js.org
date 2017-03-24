@@ -1,10 +1,13 @@
 cart
-  line-height: 1.8em
   width: 100%
-  max-width: $cartWidth
   display: table
+  padding: $themeElementPadding
+  background-color: $themeBGColor
 
-  h1
+  h2
+    margin: 0
+    padding-bottom: $themeElementPadding
+
     .expand-summary
       display: block;
       position: relative;
@@ -15,17 +18,16 @@ cart
       height: 16px;
       display: none
 
+
   lineitems
   lineitem
     width: 100%
     position: relative
     display: block
 
-  lineitems
-    padding-bottom: 20px
-
   lineitem
     display: table
+    padding-bottom: $themeElementPadding
 
     & > div
       width: 100%
@@ -51,19 +53,17 @@ cart
   .product-quantity-container
     width: 45px !important
     display: inline-block
-    margin-top: -3px
     float: right !important
+    position: relative
+    top: -8px
+    margin-left: $themeElementPadding
 
     .item
       left: 9px
 
-  .product-price-container
-    margin-right: 20px
-
   .product-description
-    line-height: 1.25em
-    padding-top: 3px
-    padding-left: 8px
+    line-height: 1em
+    padding-left: $themeElementPadding
     display: inline-block
     vertical-align: top
     width: 90%
@@ -87,25 +87,18 @@ cart
         font-size: .8em
 
   .product-image-container
-    width: 15%
     position: relative
-    // top: -20px
 
-    img:nth-child(n+2)
-      position: absolute
-      width: 100%
-      top: 0;
-      left: 0;
+    img
+      max-height: 3.5em
 
   .product-text-container
-    width: 43%
+    width: 40%
 
   .product-price-container
-    line-height: 1.25em
-    width: 22%
     text-align: right
     float: right !important
-    margin-top: 3px
+    line-height: 1em
 
   .product-list-price
     color: $themeErrorColor
@@ -122,7 +115,7 @@ cart
     font-size: 0.8em
     position: absolute
     right: 0
-    top: 1.5rem
+    top: 1em
 
   .product-currency
     display: inline
@@ -153,10 +146,9 @@ cart
         padding: 0
 
         input
+          border-radius: 1em 0 0 1em
+          border: $themeInputBorderWidth solid
           border-right: 0
-          border-radius: 22px 0 0 22px
-          background-color: transparent
-          border-width: 2px !important
           padding: 0 15px
           transition: border-color 420ms ease-in-out, color 420ms ease-in-out
           height: 32px
@@ -164,30 +156,25 @@ cart
       button
         position: relative
         width: 25%
-        border-radius: 0 22px 22px 0
+        border-radius: 0 1em 1em 0
         border-width: 0
         font-size: 1em
         padding: 0
         transition: background-color 420ms ease-in-out
-        top: 1px
         height: 32px
+        background-color: $themeTextColor
+        color: $themeTextColorInverted
 
-        span:last-child
-          display: none
-
-        &.notify
-          animation: ripple-black 1.5s infinite
-
-      &.green
+      &.applied
         promocode
           input
-            border-color: $themeAccentColor !important
-            color: $themeAccentColor !important
+            border-color: $themeGoodColor
+            color: $themeGoodColor !important
 
         button
-          background-color: $themeAccentColor !important
+          background-color: $themeGoodColor !important
 
-      &.red
+      &.failed
         promocode
           input
             border-color: $themeErrorColor !important
@@ -222,6 +209,7 @@ cart
   .invoice-total
     font-weight: bold
     font-size: 1.1em
+    padding-bottom: $themeElementPadding
 
     .invoice-label
       font-size: 1.25em

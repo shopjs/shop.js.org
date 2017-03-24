@@ -54,36 +54,52 @@
           <!--   a.pre-order-button.button(href='#')-->
           <!--     span Try Now-->
         </section>
-        <section class="full example1">
-          <pre><code class="language-html"></code></pre>
-          <cart>
-            <h1 if="{ !isEmpty() }">Your Cart</h1>
-            <h1 if="{ isEmpty() }">Your Cart Is Empty</h1>
-            <lineitems if="{ !isEmpty() }">
-              <div class="animated fadeIn">
-                <div class="product-image-container"></div>
-                <div class="product-text-container"><span class="product-description"><span class="product-name">{ data.get('productName') }</span>
-                    <p>{ data.get('description') }</p></span></div><span class="product-quantity-container locked" if="{ data.get('locked') }">{ data.get('quantity') }</span><span class="product-quantity-container" if="{ !data.get('locked') }">
-                  <quantity-select-control></quantity-select-control></span>
-                <div class="product-delete" onclick="{ delete }">Remove</div>
-                <div class="product-price-container invoice-amount">
-                  <div class="product-price">{ renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) } { parentData.get('currency').toUpperCase() }</div>
-                  <div class="product-list-price invoice-amount" if="{ data.get().listPrice &gt; data.get().price }">{ renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) } { parentData.get('currency').toUpperCase() }</div>
-                </div>
-              </div>
-            </lineitems>
-            <div if="{ !isEmpty() }">
-              <div class="invoice-line invoice-total">
-                <div class="invoice-label">Subtotal</div>
-                <div class="invoice-amount">{ renderCurrency(data.get('order.currency'), data.get('order.subtotal'))} { data.get('order.currency').toUpperCase() }</div>
-              </div>
-              <!-- a.button.submit(href='/checkout')-->
-              <!--   | Checkout-->
+        <section class="full example1 list right">
+          <div class="content">
+            <h2>Carts</h2>
+            <div class="info">
+              <pre><code class="language-html"></code></pre>
             </div>
-            <!-- div(if='{ isEmpty() }')-->
-            <!--   a.button.submit(href='/')-->
-            <!--     | Continue Shopping-->
-          </cart>
+            <div class="image">
+              <script>
+                window.images = {
+                  'red-shirt': '/img/red.png',
+                  'green-shirt': '/img/green.png',
+                };
+                
+              </script>
+              <cart images="{ images }"></cart>
+            </div>
+            <!-- p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="Shop.js Example 1",class="codepen")-->
+            <!--   | See the Pen-->
+            <!--   a(href="https://codepen.io/hanzo-io/pen/bqKGLb/")-->
+            <!--     | Shop.js Example 1-->
+            <!--   | by Hanzo (-->
+            <!--   a(href="http://codepen.io/hanzo-io")-->
+            <!--     | @hanzo-io) on-->
+            <!--   a(href="http://codepen.io")-->
+            <!--     | CodePen.-->
+            <!-- script(async,src="https://production-assets.codepen.io/assets/embed/ei.js")-->
+          </div>
+        </section>
+        <section class="full example2 list right">
+          <div class="content">
+            <h2>Checkout</h2>
+            <div class="info">
+              <pre><code class="language-html"></code></pre>
+            </div>
+            <div class="image"></div>
+            <!-- p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="Shop.js Example 1",class="codepen")-->
+            <!--   | See the Pen-->
+            <!--   a(href="https://codepen.io/hanzo-io/pen/bqKGLb/")-->
+            <!--     | Shop.js Example 1-->
+            <!--   | by Hanzo (-->
+            <!--   a(href="http://codepen.io/hanzo-io")-->
+            <!--     | @hanzo-io) on-->
+            <!--   a(href="http://codepen.io")-->
+            <!--     | CodePen.-->
+            <!-- script(async,src="https://production-assets.codepen.io/assets/embed/ei.js")-->
+          </div>
         </section>
       </div>
     </main>

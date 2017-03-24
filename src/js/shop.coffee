@@ -1,7 +1,9 @@
 import Shop from 'shop.js'
 import store from 'akasha'
 
-export default ->
+m
+
+export initShop = ->
   window.Shop = Shop
 
   settings =
@@ -15,3 +17,7 @@ export default ->
   window.client = Shop.client
 
   return Shop
+
+export getMediator = ->
+  return m
+
