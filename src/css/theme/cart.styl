@@ -4,21 +4,6 @@ cart
   padding: $themeElementPadding
   background-color: $themeBGColor
 
-  h2
-    margin: 0
-    padding-bottom: $themeElementPadding
-
-    .expand-summary
-      display: block;
-      position: relative;
-      top: 1px;
-      left: 4px;
-      z-index: 2;
-      width: 16px;
-      height: 16px;
-      display: none
-
-
   lineitems
   lineitem
     width: 100%
@@ -49,6 +34,7 @@ cart
   quantity-select-control
     .selectize-input
       max-width: 60px
+      border-bottom: 0 !important
 
   .product-quantity-container
     width: 45px !important
@@ -150,7 +136,7 @@ cart
           border: $themeInputBorderWidth solid
           border-right: 0
           padding: 0 15px
-          transition: border-color 420ms ease-in-out, color 420ms ease-in-out
+          transition: border-color $themeTransitionTime ease-in-out, color $themeTransitionTime ease-in-out
           height: 32px
 
       button
@@ -160,7 +146,7 @@ cart
         border-width: 0
         font-size: 1em
         padding: 0
-        transition: background-color 420ms ease-in-out
+        transition: background-color $themeTransitionTime ease-in-out
         height: 32px
         background-color: $themeTextColor
         color: $themeTextColorInverted
