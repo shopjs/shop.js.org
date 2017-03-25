@@ -16,6 +16,19 @@
         background-image: url('/img/logo.png')
         background-size: contain
 
-  .example1
+  .example
     cart
+    checkout
       max-width: 400px
+
+      +below(800px)
+        transform: translateX(50vw) translateX(-50%);
+
+    cart
+      float: right
+
+      +below(800px)
+        float: left
+
+    checkout
+      float: left

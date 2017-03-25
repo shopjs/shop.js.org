@@ -1,7 +1,9 @@
+$listMinHeight = 600px
+
 .list
   width 100vw
   height 100vh
-  min-height 600px
+  min-height $listMinHeight
   box-sizing border-box
   padding 40px 0
   .info
@@ -35,11 +37,11 @@
 
 .list.left .image, .list.left .info
   float right
-  min-height 600px
+  min-height $listMinHeight
 
 .list.right .image, .list.right .info
   float left
-  min-height 600px
+  min-height $listMinHeight
 
 .list.right .image, .list.left .image
   width 45%

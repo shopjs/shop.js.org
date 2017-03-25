@@ -433,6 +433,127 @@ header nav.buttons .button{
   text-align:left;
   max-width:600px;
 }
+cart h2,
+checkout h2,
+checkout-card h2,
+checkout-shippingaddress h2,
+login h2,
+orders h2,
+profile h2,
+register h2,
+reset-password h2,
+reset-password-complete h2,
+shippingaddress h2{
+  margin:0;
+  padding-bottom:10px;
+  font-size:2em;
+}
+cart:not(.ready) > *,
+checkout:not(.ready) > *,
+checkout-card:not(.ready) > *,
+checkout-shippingaddress:not(.ready) > *,
+login:not(.ready) > *,
+orders:not(.ready) > *,
+profile:not(.ready) > *,
+register:not(.ready) > *,
+reset-password:not(.ready) > *,
+reset-password-complete:not(.ready) > *,
+shippingaddress:not(.ready) > *{
+  opacity:0;
+}
+cart > *,
+checkout > *,
+checkout-card > *,
+checkout-shippingaddress > *,
+login > *,
+orders > *,
+profile > *,
+register > *,
+reset-password > *,
+reset-password-complete > *,
+shippingaddress > *{
+  -webkit-transition:opacity 500ms ease-in;
+  transition:opacity 500ms ease-in;
+}
+cart .fields,
+checkout .fields,
+checkout-card .fields,
+checkout-shippingaddress .fields,
+login .fields,
+orders .fields,
+profile .fields,
+register .fields,
+reset-password .fields,
+reset-password-complete .fields,
+shippingaddress .fields{
+  display:table;
+  width:100%;
+}
+cart .error-message,
+checkout .error-message,
+checkout-card .error-message,
+checkout-shippingaddress .error-message,
+login .error-message,
+orders .error-message,
+profile .error-message,
+register .error-message,
+reset-password .error-message,
+reset-password-complete .error-message,
+shippingaddress .error-message,
+cart .error,
+checkout .error,
+checkout-card .error,
+checkout-shippingaddress .error,
+login .error,
+orders .error,
+profile .error,
+register .error,
+reset-password .error,
+reset-password-complete .error,
+shippingaddress .error{
+  color:#f22469;
+}
+cart .input.input,
+checkout .input.input,
+checkout-card .input.input,
+checkout-shippingaddress .input.input,
+login .input.input,
+orders .input.input,
+profile .input.input,
+register .input.input,
+reset-password .input.input,
+reset-password-complete .input.input,
+shippingaddress .input.input{
+  width:100%;
+  display:block;
+  margin-bottom:10px;
+}
+cart .input.input .valid,
+checkout .input.input .valid,
+checkout-card .input.input .valid,
+checkout-shippingaddress .input.input .valid,
+login .input.input .valid,
+orders .input.input .valid,
+profile .input.input .valid,
+register .input.input .valid,
+reset-password .input.input .valid,
+reset-password-complete .input.input .valid,
+shippingaddress .input.input .valid{
+  border-color:#17bebb;
+}
+cart .input.input .invalid,
+checkout .input.input .invalid,
+checkout-card .input.input .invalid,
+checkout-shippingaddress .input.input .invalid,
+login .input.input .invalid,
+orders .input.input .invalid,
+profile .input.input .invalid,
+register .input.input .invalid,
+reset-password .input.input .invalid,
+reset-password-complete .input.input .invalid,
+shippingaddress .input.input .invalid{
+  border-color:#f22469;
+}
 cart .selectize-input,
 checkout .selectize-input,
 checkout-card .selectize-input,
@@ -452,7 +573,7 @@ shippingaddress .selectize-input{
   padding:8px 0 !important;
   box-shadow:none !important;
   border:0 !important;
-  border-bottom:2px solid $borderColor1 !important;
+  border-bottom:1px solid #000 !important;
   max-width:100%;
   border-radius:0 !important;
   height:2rem !important;
@@ -528,7 +649,6 @@ shippingaddress .selectize-input input{
   margin-top:-6px !important;
   left:0;
   height:2rem !important;
-  top:1px !important;
   padding:0 $inputHPadding;
 }
 cart .selectize-input .item,
@@ -560,7 +680,6 @@ reset-password-complete .selectize-dropdown.single,
 shippingaddress .selectize-dropdown.single{
   border-radius:0 !important;
   z-index:100001;
-  border:0;
 }
 cart .selectize-dropdown.single .selectize-dropdown-content,
 checkout .selectize-dropdown.single .selectize-dropdown-content,
@@ -655,6 +774,7 @@ reset-password-complete input,
 shippingaddress input{
   outline:none;
   border:0;
+  padding:0;
   background:transparent;
 }
 cart input:-moz-placeholder,
@@ -709,20 +829,6 @@ reset-password-complete input::-webkit-input-placeholder,
 shippingaddress input::-webkit-input-placeholder{
   color:#000;
 }
-cart .input,
-checkout .input,
-checkout-card .input,
-checkout-shippingaddress .input,
-login .input,
-orders .input,
-profile .input,
-register .input,
-reset-password .input,
-reset-password-complete .input,
-shippingaddress .input{
-  width:100%;
-  display:block;
-}
 cart .input input[type=text],
 checkout .input input[type=text],
 checkout-card .input input[type=text],
@@ -751,30 +857,8 @@ shippingaddress .input input[type=password]{
   border-bottom:1px solid;
   border-color:#000;
   border-width:1px;
-}
-cart .error-message,
-checkout .error-message,
-checkout-card .error-message,
-checkout-shippingaddress .error-message,
-login .error-message,
-orders .error-message,
-profile .error-message,
-register .error-message,
-reset-password .error-message,
-reset-password-complete .error-message,
-shippingaddress .error-message,
-cart .error,
-checkout .error,
-checkout-card .error,
-checkout-shippingaddress .error,
-login .error,
-orders .error,
-profile .error,
-register .error,
-reset-password .error,
-reset-password-complete .error,
-shippingaddress .error{
-  color:$errorColor;
+  -webkit-transition:border-color 500ms ease-in-out, color 500ms ease-in-out;
+  transition:border-color 500ms ease-in-out, color 500ms ease-in-out;
 }
 cart .button,
 checkout .button,
@@ -882,25 +966,691 @@ reset-password-complete button,
 shippingaddress button{
   outline:none;
 }
+cart .checkbox,
+checkout .checkbox,
+checkout-card .checkbox,
+checkout-shippingaddress .checkbox,
+login .checkbox,
+orders .checkbox,
+profile .checkbox,
+register .checkbox,
+reset-password .checkbox,
+reset-password-complete .checkbox,
+shippingaddress .checkbox,
+cart terms,
+checkout terms,
+checkout-card terms,
+checkout-shippingaddress terms,
+login terms,
+orders terms,
+profile terms,
+register terms,
+reset-password terms,
+reset-password-complete terms,
+shippingaddress terms,
+cart gift-toggle,
+checkout gift-toggle,
+checkout-card gift-toggle,
+checkout-shippingaddress gift-toggle,
+login gift-toggle,
+orders gift-toggle,
+profile gift-toggle,
+register gift-toggle,
+reset-password gift-toggle,
+reset-password-complete gift-toggle,
+shippingaddress gift-toggle{
+  display:block;
+}
+cart .checkbox label,
+checkout .checkbox label,
+checkout-card .checkbox label,
+checkout-shippingaddress .checkbox label,
+login .checkbox label,
+orders .checkbox label,
+profile .checkbox label,
+register .checkbox label,
+reset-password .checkbox label,
+reset-password-complete .checkbox label,
+shippingaddress .checkbox label,
+cart terms label,
+checkout terms label,
+checkout-card terms label,
+checkout-shippingaddress terms label,
+login terms label,
+orders terms label,
+profile terms label,
+register terms label,
+reset-password terms label,
+reset-password-complete terms label,
+shippingaddress terms label,
+cart gift-toggle label,
+checkout gift-toggle label,
+checkout-card gift-toggle label,
+checkout-shippingaddress gift-toggle label,
+login gift-toggle label,
+orders gift-toggle label,
+profile gift-toggle label,
+register gift-toggle label,
+reset-password gift-toggle label,
+reset-password-complete gift-toggle label,
+shippingaddress gift-toggle label{
+  padding-top:2px;
+  line-height:1.2rem;
+  display:inline-block;
+  color:#000;
+}
+cart .checkbox [type="checkbox"]:not(:checked),
+checkout .checkbox [type="checkbox"]:not(:checked),
+checkout-card .checkbox [type="checkbox"]:not(:checked),
+checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked),
+login .checkbox [type="checkbox"]:not(:checked),
+orders .checkbox [type="checkbox"]:not(:checked),
+profile .checkbox [type="checkbox"]:not(:checked),
+register .checkbox [type="checkbox"]:not(:checked),
+reset-password .checkbox [type="checkbox"]:not(:checked),
+reset-password-complete .checkbox [type="checkbox"]:not(:checked),
+shippingaddress .checkbox [type="checkbox"]:not(:checked),
+cart terms [type="checkbox"]:not(:checked),
+checkout terms [type="checkbox"]:not(:checked),
+checkout-card terms [type="checkbox"]:not(:checked),
+checkout-shippingaddress terms [type="checkbox"]:not(:checked),
+login terms [type="checkbox"]:not(:checked),
+orders terms [type="checkbox"]:not(:checked),
+profile terms [type="checkbox"]:not(:checked),
+register terms [type="checkbox"]:not(:checked),
+reset-password terms [type="checkbox"]:not(:checked),
+reset-password-complete terms [type="checkbox"]:not(:checked),
+shippingaddress terms [type="checkbox"]:not(:checked),
+cart gift-toggle [type="checkbox"]:not(:checked),
+checkout gift-toggle [type="checkbox"]:not(:checked),
+checkout-card gift-toggle [type="checkbox"]:not(:checked),
+checkout-shippingaddress gift-toggle [type="checkbox"]:not(:checked),
+login gift-toggle [type="checkbox"]:not(:checked),
+orders gift-toggle [type="checkbox"]:not(:checked),
+profile gift-toggle [type="checkbox"]:not(:checked),
+register gift-toggle [type="checkbox"]:not(:checked),
+reset-password gift-toggle [type="checkbox"]:not(:checked),
+reset-password-complete gift-toggle [type="checkbox"]:not(:checked),
+shippingaddress gift-toggle [type="checkbox"]:not(:checked),
+cart .checkbox [type="checkbox"]:checked,
+checkout .checkbox [type="checkbox"]:checked,
+checkout-card .checkbox [type="checkbox"]:checked,
+checkout-shippingaddress .checkbox [type="checkbox"]:checked,
+login .checkbox [type="checkbox"]:checked,
+orders .checkbox [type="checkbox"]:checked,
+profile .checkbox [type="checkbox"]:checked,
+register .checkbox [type="checkbox"]:checked,
+reset-password .checkbox [type="checkbox"]:checked,
+reset-password-complete .checkbox [type="checkbox"]:checked,
+shippingaddress .checkbox [type="checkbox"]:checked,
+cart terms [type="checkbox"]:checked,
+checkout terms [type="checkbox"]:checked,
+checkout-card terms [type="checkbox"]:checked,
+checkout-shippingaddress terms [type="checkbox"]:checked,
+login terms [type="checkbox"]:checked,
+orders terms [type="checkbox"]:checked,
+profile terms [type="checkbox"]:checked,
+register terms [type="checkbox"]:checked,
+reset-password terms [type="checkbox"]:checked,
+reset-password-complete terms [type="checkbox"]:checked,
+shippingaddress terms [type="checkbox"]:checked,
+cart gift-toggle [type="checkbox"]:checked,
+checkout gift-toggle [type="checkbox"]:checked,
+checkout-card gift-toggle [type="checkbox"]:checked,
+checkout-shippingaddress gift-toggle [type="checkbox"]:checked,
+login gift-toggle [type="checkbox"]:checked,
+orders gift-toggle [type="checkbox"]:checked,
+profile gift-toggle [type="checkbox"]:checked,
+register gift-toggle [type="checkbox"]:checked,
+reset-password gift-toggle [type="checkbox"]:checked,
+reset-password-complete gift-toggle [type="checkbox"]:checked,
+shippingaddress gift-toggle [type="checkbox"]:checked{
+  position:absolute;
+  left:-9999px;
+}
+cart .checkbox [type="checkbox"]:not(:checked) + label,
+checkout .checkbox [type="checkbox"]:not(:checked) + label,
+checkout-card .checkbox [type="checkbox"]:not(:checked) + label,
+checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked) + label,
+login .checkbox [type="checkbox"]:not(:checked) + label,
+orders .checkbox [type="checkbox"]:not(:checked) + label,
+profile .checkbox [type="checkbox"]:not(:checked) + label,
+register .checkbox [type="checkbox"]:not(:checked) + label,
+reset-password .checkbox [type="checkbox"]:not(:checked) + label,
+reset-password-complete .checkbox [type="checkbox"]:not(:checked) + label,
+shippingaddress .checkbox [type="checkbox"]:not(:checked) + label,
+cart terms [type="checkbox"]:not(:checked) + label,
+checkout terms [type="checkbox"]:not(:checked) + label,
+checkout-card terms [type="checkbox"]:not(:checked) + label,
+checkout-shippingaddress terms [type="checkbox"]:not(:checked) + label,
+login terms [type="checkbox"]:not(:checked) + label,
+orders terms [type="checkbox"]:not(:checked) + label,
+profile terms [type="checkbox"]:not(:checked) + label,
+register terms [type="checkbox"]:not(:checked) + label,
+reset-password terms [type="checkbox"]:not(:checked) + label,
+reset-password-complete terms [type="checkbox"]:not(:checked) + label,
+shippingaddress terms [type="checkbox"]:not(:checked) + label,
+cart gift-toggle [type="checkbox"]:not(:checked) + label,
+checkout gift-toggle [type="checkbox"]:not(:checked) + label,
+checkout-card gift-toggle [type="checkbox"]:not(:checked) + label,
+checkout-shippingaddress gift-toggle [type="checkbox"]:not(:checked) + label,
+login gift-toggle [type="checkbox"]:not(:checked) + label,
+orders gift-toggle [type="checkbox"]:not(:checked) + label,
+profile gift-toggle [type="checkbox"]:not(:checked) + label,
+register gift-toggle [type="checkbox"]:not(:checked) + label,
+reset-password gift-toggle [type="checkbox"]:not(:checked) + label,
+reset-password-complete gift-toggle [type="checkbox"]:not(:checked) + label,
+shippingaddress gift-toggle [type="checkbox"]:not(:checked) + label,
+cart .checkbox [type="checkbox"]:checked + label,
+checkout .checkbox [type="checkbox"]:checked + label,
+checkout-card .checkbox [type="checkbox"]:checked + label,
+checkout-shippingaddress .checkbox [type="checkbox"]:checked + label,
+login .checkbox [type="checkbox"]:checked + label,
+orders .checkbox [type="checkbox"]:checked + label,
+profile .checkbox [type="checkbox"]:checked + label,
+register .checkbox [type="checkbox"]:checked + label,
+reset-password .checkbox [type="checkbox"]:checked + label,
+reset-password-complete .checkbox [type="checkbox"]:checked + label,
+shippingaddress .checkbox [type="checkbox"]:checked + label,
+cart terms [type="checkbox"]:checked + label,
+checkout terms [type="checkbox"]:checked + label,
+checkout-card terms [type="checkbox"]:checked + label,
+checkout-shippingaddress terms [type="checkbox"]:checked + label,
+login terms [type="checkbox"]:checked + label,
+orders terms [type="checkbox"]:checked + label,
+profile terms [type="checkbox"]:checked + label,
+register terms [type="checkbox"]:checked + label,
+reset-password terms [type="checkbox"]:checked + label,
+reset-password-complete terms [type="checkbox"]:checked + label,
+shippingaddress terms [type="checkbox"]:checked + label,
+cart gift-toggle [type="checkbox"]:checked + label,
+checkout gift-toggle [type="checkbox"]:checked + label,
+checkout-card gift-toggle [type="checkbox"]:checked + label,
+checkout-shippingaddress gift-toggle [type="checkbox"]:checked + label,
+login gift-toggle [type="checkbox"]:checked + label,
+orders gift-toggle [type="checkbox"]:checked + label,
+profile gift-toggle [type="checkbox"]:checked + label,
+register gift-toggle [type="checkbox"]:checked + label,
+reset-password gift-toggle [type="checkbox"]:checked + label,
+reset-password-complete gift-toggle [type="checkbox"]:checked + label,
+shippingaddress gift-toggle [type="checkbox"]:checked + label{
+  position:relative;
+  text-indent:25px;
+  cursor:pointer;
+}
+cart .checkbox [type="checkbox"]:not(:checked) + label:before,
+checkout .checkbox [type="checkbox"]:not(:checked) + label:before,
+checkout-card .checkbox [type="checkbox"]:not(:checked) + label:before,
+checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:before,
+login .checkbox [type="checkbox"]:not(:checked) + label:before,
+orders .checkbox [type="checkbox"]:not(:checked) + label:before,
+profile .checkbox [type="checkbox"]:not(:checked) + label:before,
+register .checkbox [type="checkbox"]:not(:checked) + label:before,
+reset-password .checkbox [type="checkbox"]:not(:checked) + label:before,
+reset-password-complete .checkbox [type="checkbox"]:not(:checked) + label:before,
+shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:before,
+cart terms [type="checkbox"]:not(:checked) + label:before,
+checkout terms [type="checkbox"]:not(:checked) + label:before,
+checkout-card terms [type="checkbox"]:not(:checked) + label:before,
+checkout-shippingaddress terms [type="checkbox"]:not(:checked) + label:before,
+login terms [type="checkbox"]:not(:checked) + label:before,
+orders terms [type="checkbox"]:not(:checked) + label:before,
+profile terms [type="checkbox"]:not(:checked) + label:before,
+register terms [type="checkbox"]:not(:checked) + label:before,
+reset-password terms [type="checkbox"]:not(:checked) + label:before,
+reset-password-complete terms [type="checkbox"]:not(:checked) + label:before,
+shippingaddress terms [type="checkbox"]:not(:checked) + label:before,
+cart gift-toggle [type="checkbox"]:not(:checked) + label:before,
+checkout gift-toggle [type="checkbox"]:not(:checked) + label:before,
+checkout-card gift-toggle [type="checkbox"]:not(:checked) + label:before,
+checkout-shippingaddress gift-toggle [type="checkbox"]:not(:checked) + label:before,
+login gift-toggle [type="checkbox"]:not(:checked) + label:before,
+orders gift-toggle [type="checkbox"]:not(:checked) + label:before,
+profile gift-toggle [type="checkbox"]:not(:checked) + label:before,
+register gift-toggle [type="checkbox"]:not(:checked) + label:before,
+reset-password gift-toggle [type="checkbox"]:not(:checked) + label:before,
+reset-password-complete gift-toggle [type="checkbox"]:not(:checked) + label:before,
+shippingaddress gift-toggle [type="checkbox"]:not(:checked) + label:before,
+cart .checkbox [type="checkbox"]:checked + label:before,
+checkout .checkbox [type="checkbox"]:checked + label:before,
+checkout-card .checkbox [type="checkbox"]:checked + label:before,
+checkout-shippingaddress .checkbox [type="checkbox"]:checked + label:before,
+login .checkbox [type="checkbox"]:checked + label:before,
+orders .checkbox [type="checkbox"]:checked + label:before,
+profile .checkbox [type="checkbox"]:checked + label:before,
+register .checkbox [type="checkbox"]:checked + label:before,
+reset-password .checkbox [type="checkbox"]:checked + label:before,
+reset-password-complete .checkbox [type="checkbox"]:checked + label:before,
+shippingaddress .checkbox [type="checkbox"]:checked + label:before,
+cart terms [type="checkbox"]:checked + label:before,
+checkout terms [type="checkbox"]:checked + label:before,
+checkout-card terms [type="checkbox"]:checked + label:before,
+checkout-shippingaddress terms [type="checkbox"]:checked + label:before,
+login terms [type="checkbox"]:checked + label:before,
+orders terms [type="checkbox"]:checked + label:before,
+profile terms [type="checkbox"]:checked + label:before,
+register terms [type="checkbox"]:checked + label:before,
+reset-password terms [type="checkbox"]:checked + label:before,
+reset-password-complete terms [type="checkbox"]:checked + label:before,
+shippingaddress terms [type="checkbox"]:checked + label:before,
+cart gift-toggle [type="checkbox"]:checked + label:before,
+checkout gift-toggle [type="checkbox"]:checked + label:before,
+checkout-card gift-toggle [type="checkbox"]:checked + label:before,
+checkout-shippingaddress gift-toggle [type="checkbox"]:checked + label:before,
+login gift-toggle [type="checkbox"]:checked + label:before,
+orders gift-toggle [type="checkbox"]:checked + label:before,
+profile gift-toggle [type="checkbox"]:checked + label:before,
+register gift-toggle [type="checkbox"]:checked + label:before,
+reset-password gift-toggle [type="checkbox"]:checked + label:before,
+reset-password-complete gift-toggle [type="checkbox"]:checked + label:before,
+shippingaddress gift-toggle [type="checkbox"]:checked + label:before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:2px;
+  width:17px;
+  height:17px;
+  border:1px solid #000;
+}
+cart .checkbox [type="checkbox"]:not(:checked) + label:after,
+checkout .checkbox [type="checkbox"]:not(:checked) + label:after,
+checkout-card .checkbox [type="checkbox"]:not(:checked) + label:after,
+checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:after,
+login .checkbox [type="checkbox"]:not(:checked) + label:after,
+orders .checkbox [type="checkbox"]:not(:checked) + label:after,
+profile .checkbox [type="checkbox"]:not(:checked) + label:after,
+register .checkbox [type="checkbox"]:not(:checked) + label:after,
+reset-password .checkbox [type="checkbox"]:not(:checked) + label:after,
+reset-password-complete .checkbox [type="checkbox"]:not(:checked) + label:after,
+shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:after,
+cart terms [type="checkbox"]:not(:checked) + label:after,
+checkout terms [type="checkbox"]:not(:checked) + label:after,
+checkout-card terms [type="checkbox"]:not(:checked) + label:after,
+checkout-shippingaddress terms [type="checkbox"]:not(:checked) + label:after,
+login terms [type="checkbox"]:not(:checked) + label:after,
+orders terms [type="checkbox"]:not(:checked) + label:after,
+profile terms [type="checkbox"]:not(:checked) + label:after,
+register terms [type="checkbox"]:not(:checked) + label:after,
+reset-password terms [type="checkbox"]:not(:checked) + label:after,
+reset-password-complete terms [type="checkbox"]:not(:checked) + label:after,
+shippingaddress terms [type="checkbox"]:not(:checked) + label:after,
+cart gift-toggle [type="checkbox"]:not(:checked) + label:after,
+checkout gift-toggle [type="checkbox"]:not(:checked) + label:after,
+checkout-card gift-toggle [type="checkbox"]:not(:checked) + label:after,
+checkout-shippingaddress gift-toggle [type="checkbox"]:not(:checked) + label:after,
+login gift-toggle [type="checkbox"]:not(:checked) + label:after,
+orders gift-toggle [type="checkbox"]:not(:checked) + label:after,
+profile gift-toggle [type="checkbox"]:not(:checked) + label:after,
+register gift-toggle [type="checkbox"]:not(:checked) + label:after,
+reset-password gift-toggle [type="checkbox"]:not(:checked) + label:after,
+reset-password-complete gift-toggle [type="checkbox"]:not(:checked) + label:after,
+shippingaddress gift-toggle [type="checkbox"]:not(:checked) + label:after,
+cart .checkbox [type="checkbox"]:checked + label:after,
+checkout .checkbox [type="checkbox"]:checked + label:after,
+checkout-card .checkbox [type="checkbox"]:checked + label:after,
+checkout-shippingaddress .checkbox [type="checkbox"]:checked + label:after,
+login .checkbox [type="checkbox"]:checked + label:after,
+orders .checkbox [type="checkbox"]:checked + label:after,
+profile .checkbox [type="checkbox"]:checked + label:after,
+register .checkbox [type="checkbox"]:checked + label:after,
+reset-password .checkbox [type="checkbox"]:checked + label:after,
+reset-password-complete .checkbox [type="checkbox"]:checked + label:after,
+shippingaddress .checkbox [type="checkbox"]:checked + label:after,
+cart terms [type="checkbox"]:checked + label:after,
+checkout terms [type="checkbox"]:checked + label:after,
+checkout-card terms [type="checkbox"]:checked + label:after,
+checkout-shippingaddress terms [type="checkbox"]:checked + label:after,
+login terms [type="checkbox"]:checked + label:after,
+orders terms [type="checkbox"]:checked + label:after,
+profile terms [type="checkbox"]:checked + label:after,
+register terms [type="checkbox"]:checked + label:after,
+reset-password terms [type="checkbox"]:checked + label:after,
+reset-password-complete terms [type="checkbox"]:checked + label:after,
+shippingaddress terms [type="checkbox"]:checked + label:after,
+cart gift-toggle [type="checkbox"]:checked + label:after,
+checkout gift-toggle [type="checkbox"]:checked + label:after,
+checkout-card gift-toggle [type="checkbox"]:checked + label:after,
+checkout-shippingaddress gift-toggle [type="checkbox"]:checked + label:after,
+login gift-toggle [type="checkbox"]:checked + label:after,
+orders gift-toggle [type="checkbox"]:checked + label:after,
+profile gift-toggle [type="checkbox"]:checked + label:after,
+register gift-toggle [type="checkbox"]:checked + label:after,
+reset-password gift-toggle [type="checkbox"]:checked + label:after,
+reset-password-complete gift-toggle [type="checkbox"]:checked + label:after,
+shippingaddress gift-toggle [type="checkbox"]:checked + label:after{
+  content:'✔';
+  position:absolute;
+  top:3px;
+  left:2px;
+  font-size:18px;
+  line-height:0.8;
+  color:#17bebb;
+  -webkit-transition:all 0.2s;
+  transition:all 0.2s;
+  text-indent:0;
+}
+cart .checkbox [type="checkbox"]:not(:checked) + label:after,
+checkout .checkbox [type="checkbox"]:not(:checked) + label:after,
+checkout-card .checkbox [type="checkbox"]:not(:checked) + label:after,
+checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:after,
+login .checkbox [type="checkbox"]:not(:checked) + label:after,
+orders .checkbox [type="checkbox"]:not(:checked) + label:after,
+profile .checkbox [type="checkbox"]:not(:checked) + label:after,
+register .checkbox [type="checkbox"]:not(:checked) + label:after,
+reset-password .checkbox [type="checkbox"]:not(:checked) + label:after,
+reset-password-complete .checkbox [type="checkbox"]:not(:checked) + label:after,
+shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:after,
+cart terms [type="checkbox"]:not(:checked) + label:after,
+checkout terms [type="checkbox"]:not(:checked) + label:after,
+checkout-card terms [type="checkbox"]:not(:checked) + label:after,
+checkout-shippingaddress terms [type="checkbox"]:not(:checked) + label:after,
+login terms [type="checkbox"]:not(:checked) + label:after,
+orders terms [type="checkbox"]:not(:checked) + label:after,
+profile terms [type="checkbox"]:not(:checked) + label:after,
+register terms [type="checkbox"]:not(:checked) + label:after,
+reset-password terms [type="checkbox"]:not(:checked) + label:after,
+reset-password-complete terms [type="checkbox"]:not(:checked) + label:after,
+shippingaddress terms [type="checkbox"]:not(:checked) + label:after,
+cart gift-toggle [type="checkbox"]:not(:checked) + label:after,
+checkout gift-toggle [type="checkbox"]:not(:checked) + label:after,
+checkout-card gift-toggle [type="checkbox"]:not(:checked) + label:after,
+checkout-shippingaddress gift-toggle [type="checkbox"]:not(:checked) + label:after,
+login gift-toggle [type="checkbox"]:not(:checked) + label:after,
+orders gift-toggle [type="checkbox"]:not(:checked) + label:after,
+profile gift-toggle [type="checkbox"]:not(:checked) + label:after,
+register gift-toggle [type="checkbox"]:not(:checked) + label:after,
+reset-password gift-toggle [type="checkbox"]:not(:checked) + label:after,
+reset-password-complete gift-toggle [type="checkbox"]:not(:checked) + label:after,
+shippingaddress gift-toggle [type="checkbox"]:not(:checked) + label:after{
+  opacity:0;
+  -webkit-transform:scale(0);
+          transform:scale(0);
+}
+cart .checkbox [type="checkbox"]:checked + label:after,
+checkout .checkbox [type="checkbox"]:checked + label:after,
+checkout-card .checkbox [type="checkbox"]:checked + label:after,
+checkout-shippingaddress .checkbox [type="checkbox"]:checked + label:after,
+login .checkbox [type="checkbox"]:checked + label:after,
+orders .checkbox [type="checkbox"]:checked + label:after,
+profile .checkbox [type="checkbox"]:checked + label:after,
+register .checkbox [type="checkbox"]:checked + label:after,
+reset-password .checkbox [type="checkbox"]:checked + label:after,
+reset-password-complete .checkbox [type="checkbox"]:checked + label:after,
+shippingaddress .checkbox [type="checkbox"]:checked + label:after,
+cart terms [type="checkbox"]:checked + label:after,
+checkout terms [type="checkbox"]:checked + label:after,
+checkout-card terms [type="checkbox"]:checked + label:after,
+checkout-shippingaddress terms [type="checkbox"]:checked + label:after,
+login terms [type="checkbox"]:checked + label:after,
+orders terms [type="checkbox"]:checked + label:after,
+profile terms [type="checkbox"]:checked + label:after,
+register terms [type="checkbox"]:checked + label:after,
+reset-password terms [type="checkbox"]:checked + label:after,
+reset-password-complete terms [type="checkbox"]:checked + label:after,
+shippingaddress terms [type="checkbox"]:checked + label:after,
+cart gift-toggle [type="checkbox"]:checked + label:after,
+checkout gift-toggle [type="checkbox"]:checked + label:after,
+checkout-card gift-toggle [type="checkbox"]:checked + label:after,
+checkout-shippingaddress gift-toggle [type="checkbox"]:checked + label:after,
+login gift-toggle [type="checkbox"]:checked + label:after,
+orders gift-toggle [type="checkbox"]:checked + label:after,
+profile gift-toggle [type="checkbox"]:checked + label:after,
+register gift-toggle [type="checkbox"]:checked + label:after,
+reset-password gift-toggle [type="checkbox"]:checked + label:after,
+reset-password-complete gift-toggle [type="checkbox"]:checked + label:after,
+shippingaddress gift-toggle [type="checkbox"]:checked + label:after{
+  opacity:1;
+  -webkit-transform:scale(1);
+          transform:scale(1);
+}
+cart .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout-card .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout-shippingaddress .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+login .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+orders .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+profile .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+register .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+reset-password .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+reset-password-complete .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+shippingaddress .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+cart terms [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout terms [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout-card terms [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout-shippingaddress terms [type="checkbox"]:disabled:not(:checked) + label:before,
+login terms [type="checkbox"]:disabled:not(:checked) + label:before,
+orders terms [type="checkbox"]:disabled:not(:checked) + label:before,
+profile terms [type="checkbox"]:disabled:not(:checked) + label:before,
+register terms [type="checkbox"]:disabled:not(:checked) + label:before,
+reset-password terms [type="checkbox"]:disabled:not(:checked) + label:before,
+reset-password-complete terms [type="checkbox"]:disabled:not(:checked) + label:before,
+shippingaddress terms [type="checkbox"]:disabled:not(:checked) + label:before,
+cart gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout-card gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout-shippingaddress gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+login gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+orders gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+profile gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+register gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+reset-password gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+reset-password-complete gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+shippingaddress gift-toggle [type="checkbox"]:disabled:not(:checked) + label:before,
+cart .checkbox [type="checkbox"]:disabled:checked + label:before,
+checkout .checkbox [type="checkbox"]:disabled:checked + label:before,
+checkout-card .checkbox [type="checkbox"]:disabled:checked + label:before,
+checkout-shippingaddress .checkbox [type="checkbox"]:disabled:checked + label:before,
+login .checkbox [type="checkbox"]:disabled:checked + label:before,
+orders .checkbox [type="checkbox"]:disabled:checked + label:before,
+profile .checkbox [type="checkbox"]:disabled:checked + label:before,
+register .checkbox [type="checkbox"]:disabled:checked + label:before,
+reset-password .checkbox [type="checkbox"]:disabled:checked + label:before,
+reset-password-complete .checkbox [type="checkbox"]:disabled:checked + label:before,
+shippingaddress .checkbox [type="checkbox"]:disabled:checked + label:before,
+cart terms [type="checkbox"]:disabled:checked + label:before,
+checkout terms [type="checkbox"]:disabled:checked + label:before,
+checkout-card terms [type="checkbox"]:disabled:checked + label:before,
+checkout-shippingaddress terms [type="checkbox"]:disabled:checked + label:before,
+login terms [type="checkbox"]:disabled:checked + label:before,
+orders terms [type="checkbox"]:disabled:checked + label:before,
+profile terms [type="checkbox"]:disabled:checked + label:before,
+register terms [type="checkbox"]:disabled:checked + label:before,
+reset-password terms [type="checkbox"]:disabled:checked + label:before,
+reset-password-complete terms [type="checkbox"]:disabled:checked + label:before,
+shippingaddress terms [type="checkbox"]:disabled:checked + label:before,
+cart gift-toggle [type="checkbox"]:disabled:checked + label:before,
+checkout gift-toggle [type="checkbox"]:disabled:checked + label:before,
+checkout-card gift-toggle [type="checkbox"]:disabled:checked + label:before,
+checkout-shippingaddress gift-toggle [type="checkbox"]:disabled:checked + label:before,
+login gift-toggle [type="checkbox"]:disabled:checked + label:before,
+orders gift-toggle [type="checkbox"]:disabled:checked + label:before,
+profile gift-toggle [type="checkbox"]:disabled:checked + label:before,
+register gift-toggle [type="checkbox"]:disabled:checked + label:before,
+reset-password gift-toggle [type="checkbox"]:disabled:checked + label:before,
+reset-password-complete gift-toggle [type="checkbox"]:disabled:checked + label:before,
+shippingaddress gift-toggle [type="checkbox"]:disabled:checked + label:before{
+  box-shadow:none;
+  border-color:#bbb;
+  background-color:#ddd;
+}
+cart .checkbox [type="checkbox"]:disabled:checked + label:after,
+checkout .checkbox [type="checkbox"]:disabled:checked + label:after,
+checkout-card .checkbox [type="checkbox"]:disabled:checked + label:after,
+checkout-shippingaddress .checkbox [type="checkbox"]:disabled:checked + label:after,
+login .checkbox [type="checkbox"]:disabled:checked + label:after,
+orders .checkbox [type="checkbox"]:disabled:checked + label:after,
+profile .checkbox [type="checkbox"]:disabled:checked + label:after,
+register .checkbox [type="checkbox"]:disabled:checked + label:after,
+reset-password .checkbox [type="checkbox"]:disabled:checked + label:after,
+reset-password-complete .checkbox [type="checkbox"]:disabled:checked + label:after,
+shippingaddress .checkbox [type="checkbox"]:disabled:checked + label:after,
+cart terms [type="checkbox"]:disabled:checked + label:after,
+checkout terms [type="checkbox"]:disabled:checked + label:after,
+checkout-card terms [type="checkbox"]:disabled:checked + label:after,
+checkout-shippingaddress terms [type="checkbox"]:disabled:checked + label:after,
+login terms [type="checkbox"]:disabled:checked + label:after,
+orders terms [type="checkbox"]:disabled:checked + label:after,
+profile terms [type="checkbox"]:disabled:checked + label:after,
+register terms [type="checkbox"]:disabled:checked + label:after,
+reset-password terms [type="checkbox"]:disabled:checked + label:after,
+reset-password-complete terms [type="checkbox"]:disabled:checked + label:after,
+shippingaddress terms [type="checkbox"]:disabled:checked + label:after,
+cart gift-toggle [type="checkbox"]:disabled:checked + label:after,
+checkout gift-toggle [type="checkbox"]:disabled:checked + label:after,
+checkout-card gift-toggle [type="checkbox"]:disabled:checked + label:after,
+checkout-shippingaddress gift-toggle [type="checkbox"]:disabled:checked + label:after,
+login gift-toggle [type="checkbox"]:disabled:checked + label:after,
+orders gift-toggle [type="checkbox"]:disabled:checked + label:after,
+profile gift-toggle [type="checkbox"]:disabled:checked + label:after,
+register gift-toggle [type="checkbox"]:disabled:checked + label:after,
+reset-password gift-toggle [type="checkbox"]:disabled:checked + label:after,
+reset-password-complete gift-toggle [type="checkbox"]:disabled:checked + label:after,
+shippingaddress gift-toggle [type="checkbox"]:disabled:checked + label:after{
+  color:#999;
+}
+cart .checkbox [type="checkbox"]:disabled + label,
+checkout .checkbox [type="checkbox"]:disabled + label,
+checkout-card .checkbox [type="checkbox"]:disabled + label,
+checkout-shippingaddress .checkbox [type="checkbox"]:disabled + label,
+login .checkbox [type="checkbox"]:disabled + label,
+orders .checkbox [type="checkbox"]:disabled + label,
+profile .checkbox [type="checkbox"]:disabled + label,
+register .checkbox [type="checkbox"]:disabled + label,
+reset-password .checkbox [type="checkbox"]:disabled + label,
+reset-password-complete .checkbox [type="checkbox"]:disabled + label,
+shippingaddress .checkbox [type="checkbox"]:disabled + label,
+cart terms [type="checkbox"]:disabled + label,
+checkout terms [type="checkbox"]:disabled + label,
+checkout-card terms [type="checkbox"]:disabled + label,
+checkout-shippingaddress terms [type="checkbox"]:disabled + label,
+login terms [type="checkbox"]:disabled + label,
+orders terms [type="checkbox"]:disabled + label,
+profile terms [type="checkbox"]:disabled + label,
+register terms [type="checkbox"]:disabled + label,
+reset-password terms [type="checkbox"]:disabled + label,
+reset-password-complete terms [type="checkbox"]:disabled + label,
+shippingaddress terms [type="checkbox"]:disabled + label,
+cart gift-toggle [type="checkbox"]:disabled + label,
+checkout gift-toggle [type="checkbox"]:disabled + label,
+checkout-card gift-toggle [type="checkbox"]:disabled + label,
+checkout-shippingaddress gift-toggle [type="checkbox"]:disabled + label,
+login gift-toggle [type="checkbox"]:disabled + label,
+orders gift-toggle [type="checkbox"]:disabled + label,
+profile gift-toggle [type="checkbox"]:disabled + label,
+register gift-toggle [type="checkbox"]:disabled + label,
+reset-password gift-toggle [type="checkbox"]:disabled + label,
+reset-password-complete gift-toggle [type="checkbox"]:disabled + label,
+shippingaddress gift-toggle [type="checkbox"]:disabled + label{
+  color:#aaa;
+}
+cart .checkbox [type="checkbox"]:checked:focus + label:before,
+checkout .checkbox [type="checkbox"]:checked:focus + label:before,
+checkout-card .checkbox [type="checkbox"]:checked:focus + label:before,
+checkout-shippingaddress .checkbox [type="checkbox"]:checked:focus + label:before,
+login .checkbox [type="checkbox"]:checked:focus + label:before,
+orders .checkbox [type="checkbox"]:checked:focus + label:before,
+profile .checkbox [type="checkbox"]:checked:focus + label:before,
+register .checkbox [type="checkbox"]:checked:focus + label:before,
+reset-password .checkbox [type="checkbox"]:checked:focus + label:before,
+reset-password-complete .checkbox [type="checkbox"]:checked:focus + label:before,
+shippingaddress .checkbox [type="checkbox"]:checked:focus + label:before,
+cart terms [type="checkbox"]:checked:focus + label:before,
+checkout terms [type="checkbox"]:checked:focus + label:before,
+checkout-card terms [type="checkbox"]:checked:focus + label:before,
+checkout-shippingaddress terms [type="checkbox"]:checked:focus + label:before,
+login terms [type="checkbox"]:checked:focus + label:before,
+orders terms [type="checkbox"]:checked:focus + label:before,
+profile terms [type="checkbox"]:checked:focus + label:before,
+register terms [type="checkbox"]:checked:focus + label:before,
+reset-password terms [type="checkbox"]:checked:focus + label:before,
+reset-password-complete terms [type="checkbox"]:checked:focus + label:before,
+shippingaddress terms [type="checkbox"]:checked:focus + label:before,
+cart gift-toggle [type="checkbox"]:checked:focus + label:before,
+checkout gift-toggle [type="checkbox"]:checked:focus + label:before,
+checkout-card gift-toggle [type="checkbox"]:checked:focus + label:before,
+checkout-shippingaddress gift-toggle [type="checkbox"]:checked:focus + label:before,
+login gift-toggle [type="checkbox"]:checked:focus + label:before,
+orders gift-toggle [type="checkbox"]:checked:focus + label:before,
+profile gift-toggle [type="checkbox"]:checked:focus + label:before,
+register gift-toggle [type="checkbox"]:checked:focus + label:before,
+reset-password gift-toggle [type="checkbox"]:checked:focus + label:before,
+reset-password-complete gift-toggle [type="checkbox"]:checked:focus + label:before,
+shippingaddress gift-toggle [type="checkbox"]:checked:focus + label:before,
+cart .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+checkout .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+checkout-card .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+login .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+orders .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+profile .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+register .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+reset-password .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+reset-password-complete .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+shippingaddress .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+cart terms [type="checkbox"]:not(:checked):focus + label:before,
+checkout terms [type="checkbox"]:not(:checked):focus + label:before,
+checkout-card terms [type="checkbox"]:not(:checked):focus + label:before,
+checkout-shippingaddress terms [type="checkbox"]:not(:checked):focus + label:before,
+login terms [type="checkbox"]:not(:checked):focus + label:before,
+orders terms [type="checkbox"]:not(:checked):focus + label:before,
+profile terms [type="checkbox"]:not(:checked):focus + label:before,
+register terms [type="checkbox"]:not(:checked):focus + label:before,
+reset-password terms [type="checkbox"]:not(:checked):focus + label:before,
+reset-password-complete terms [type="checkbox"]:not(:checked):focus + label:before,
+shippingaddress terms [type="checkbox"]:not(:checked):focus + label:before,
+cart gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+checkout gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+checkout-card gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+checkout-shippingaddress gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+login gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+orders gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+profile gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+register gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+reset-password gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+reset-password-complete gift-toggle [type="checkbox"]:not(:checked):focus + label:before,
+shippingaddress gift-toggle [type="checkbox"]:not(:checked):focus + label:before{
+  border:1px dotted #000;
+}
+cart .checkbox label:hover:before,
+checkout .checkbox label:hover:before,
+checkout-card .checkbox label:hover:before,
+checkout-shippingaddress .checkbox label:hover:before,
+login .checkbox label:hover:before,
+orders .checkbox label:hover:before,
+profile .checkbox label:hover:before,
+register .checkbox label:hover:before,
+reset-password .checkbox label:hover:before,
+reset-password-complete .checkbox label:hover:before,
+shippingaddress .checkbox label:hover:before,
+cart terms label:hover:before,
+checkout terms label:hover:before,
+checkout-card terms label:hover:before,
+checkout-shippingaddress terms label:hover:before,
+login terms label:hover:before,
+orders terms label:hover:before,
+profile terms label:hover:before,
+register terms label:hover:before,
+reset-password terms label:hover:before,
+reset-password-complete terms label:hover:before,
+shippingaddress terms label:hover:before,
+cart gift-toggle label:hover:before,
+checkout gift-toggle label:hover:before,
+checkout-card gift-toggle label:hover:before,
+checkout-shippingaddress gift-toggle label:hover:before,
+login gift-toggle label:hover:before,
+orders gift-toggle label:hover:before,
+profile gift-toggle label:hover:before,
+register gift-toggle label:hover:before,
+reset-password gift-toggle label:hover:before,
+reset-password-complete gift-toggle label:hover:before,
+shippingaddress gift-toggle label:hover:before{
+  border:1px solid #17bebb !important;
+}
 cart{
   width:100%;
   display:table;
   padding:20px;
   background-color:#eee;
-}
-cart h2{
-  margin:0;
-  padding-bottom:20px;
-}
-cart h2 .expand-summary{
-  display:block;
-  position:relative;
-  top:1px;
-  left:4px;
-  z-index:2;
-  width:16px;
-  height:16px;
-  display:none;
 }
 cart lineitems,
 cart lineitem{
@@ -931,6 +1681,7 @@ cart .invoice-line{
 }
 cart quantity-select-control .selectize-input{
   max-width:60px;
+  border-bottom:0 !important;
 }
 cart .product-quantity-container{
   width:45px !important;
@@ -1021,8 +1772,8 @@ cart .promo.promo .promo-row promocode input{
   border:1px solid;
   border-right:0;
   padding:0 15px;
-  -webkit-transition:border-color 420ms ease-in-out, color 420ms ease-in-out;
-  transition:border-color 420ms ease-in-out, color 420ms ease-in-out;
+  -webkit-transition:border-color 500ms ease-in-out, color 500ms ease-in-out;
+  transition:border-color 500ms ease-in-out, color 500ms ease-in-out;
   height:32px;
 }
 cart .promo.promo .promo-row button{
@@ -1032,8 +1783,8 @@ cart .promo.promo .promo-row button{
   border-width:0;
   font-size:1em;
   padding:0;
-  -webkit-transition:background-color 420ms ease-in-out;
-  transition:background-color 420ms ease-in-out;
+  -webkit-transition:background-color 500ms ease-in-out;
+  transition:background-color 500ms ease-in-out;
   height:32px;
   background-color:#000;
   color:#fff;
@@ -1087,6 +1838,125 @@ cart .invoice-total .invoice-label{
 cart .invoice-amount{
   text-align:right;
   font-weight:bold;
+}
+checkout{
+  width:100%;
+  display:table;
+  padding:20px;
+  background-color:#eee;
+}
+checkout .checkout-section{
+  margin-bottom:20px;
+}
+checkout .lock-icon{
+  height:16px;
+  position:relative;
+  top:2px;
+  left:4px;
+}
+checkout shippingaddress-line1.input.input{
+  width:calc(99.9% * 0.6 - (20px - 20px * 0.6));
+}
+checkout shippingaddress-line1.input.input:nth-child(1n){
+  float:left;
+  margin-right:20px;
+  clear:none;
+}
+checkout shippingaddress-line1.input.input:last-child{
+  margin-right:0;
+}
+checkout shippingaddress-line1.input.input:nth-child(3n){
+  margin-right:0;
+  float:right;
+}
+checkout shippingaddress-line1.input.input:nth-child(3n + 1){
+  clear:both;
+}
+checkout shippingaddress-line2.input.input{
+  width:calc(99.9% * 0.4 - (20px - 20px * 0.4));
+}
+checkout shippingaddress-line2.input.input:nth-child(1n){
+  float:left;
+  margin-right:20px;
+  clear:none;
+}
+checkout shippingaddress-line2.input.input:last-child{
+  margin-right:0;
+}
+checkout shippingaddress-line2.input.input:nth-child(3n){
+  margin-right:0;
+  float:right;
+}
+checkout shippingaddress-line2.input.input:nth-child(3n + 1){
+  clear:both;
+}
+checkout card-expiry.input.input{
+  width:calc(99.9% * 0.7 - (20px - 20px * 0.7));
+}
+checkout card-expiry.input.input:nth-child(1n){
+  float:left;
+  margin-right:20px;
+  clear:none;
+}
+checkout card-expiry.input.input:last-child{
+  margin-right:0;
+}
+checkout card-expiry.input.input:nth-child(4n){
+  margin-right:0;
+  float:right;
+}
+checkout card-expiry.input.input:nth-child(4n + 1){
+  clear:both;
+}
+checkout card-cvc.input.input{
+  width:calc(99.9% * 0.3 - (20px - 20px * 0.3));
+}
+checkout card-cvc.input.input:nth-child(1n){
+  float:left;
+  margin-right:20px;
+  clear:none;
+}
+checkout card-cvc.input.input:last-child{
+  margin-right:0;
+}
+checkout card-cvc.input.input:nth-child(4n){
+  margin-right:0;
+  float:right;
+}
+checkout card-cvc.input.input:nth-child(4n + 1){
+  clear:both;
+}
+checkout card-number input{
+  margin-bottom:10px;
+}
+checkout card-number .cards-accepted{
+  display:table;
+  width:100%;
+}
+checkout card-number .cards-accepted .card-logo{
+  height:22px;
+  margin-right:4px;
+  float:left;
+  opacity:0.5;
+}
+checkout card-number .amex ~ .cards-accepted .amex-logo{
+  opacity:1;
+}
+checkout card-number .discover ~ .cards-accepted .discover-logo{
+  opacity:1;
+}
+checkout card-number .jcb ~ .cards-accepted .jcb-logo{
+  opacity:1;
+}
+checkout card-number .mastercard ~ .cards-accepted .mastercard-logo{
+  opacity:1;
+}
+checkout card-number .visa ~ .cards-accepted .visa-logo{
+  opacity:1;
+}
+checkout .stripe-logo{
+  height:22px;
+  float:right;
 }
 
 code[class*="language-"],
@@ -1213,6 +2083,7 @@ body .full{
 }
 body pre[class*="language-"]{
   margin:0;
+  margin-bottom:20px;
 }
 body .list.list{
   height:auto;
@@ -1222,13 +2093,17 @@ body .list.list .content{
   padding:0;
 }
 body .list.list .info{
-  padding:0;
-  padding-bottom:40px;
-  padding-right:40px;
+  margin-bottom:40px;
   min-height:0;
+}
+body .list.list .info h2{
+  padding:0 20px;
 }
 body .list.list .image{
   min-height:0;
+}
+body .list.list .info{
+  padding:0 20px;
 }
 #page-index #hero .title{
   -webkit-transform:translateY(52.5vh) translateY(-50%);
@@ -1247,8 +2122,15 @@ body .list.list .image{
   background-image:url("/img/logo.png");
   background-size:contain;
 }
-#page-index .example1 cart{
+#page-index .example cart,
+#page-index .example checkout{
   max-width:400px;
+}
+#page-index .example cart{
+  float:right;
+}
+#page-index .example checkout{
+  float:left;
 }
 @media only screen and (max-width: 400px){
 
@@ -1281,7 +2163,17 @@ body .list.list .image{
   }
 
   body .list.list .info{
-    padding-right:0px;
+    margin-right:0px;
+  }
+
+  #page-index .example cart,
+  #page-index .example checkout{
+    -webkit-transform:translateX(50vw) translateX(-50%);
+    transform:translateX(50vw) translateX(-50%);
+  }
+
+  #page-index .example cart{
+    float:left;
   }
 }
 @media only screen and (max-width: 375px){
