@@ -17,7 +17,25 @@ export initPrism = ->
     example2:
       html: '''
         <checkout terms-url="/terms"></checkout>
+      '''
 
+    example3:
+      html: '''
+        <script>
+          var images = {
+            'red-shirt': '/img/red.png',
+            'green-shirt': '/img/green.png',
+          };
+
+          var openCart = function() {
+            window.m.trigger('side-pane-open', 'side-cart')
+          }
+
+        </script>
+        <button onclick="openCart()">Open the Cart</button>
+        <side-pane id="side-cart">
+          <cart images="{ images }"></cart>
+        </side-pane>
       '''
 
   for clas, example of examples

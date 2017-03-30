@@ -1,0 +1,13 @@
+script.
+  var images = {
+    'red-shirt': '/img/red.png',
+    'green-shirt': '/img/green.png',
+  };
+
+  var openModal = function() {
+    window.m.trigger('checkout-open', 'checkout')
+  }
+
+checkout-modal(id='checkout', images='{ images }')
+  div.thankyou
+    h2 Thank You!

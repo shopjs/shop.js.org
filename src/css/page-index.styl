@@ -17,18 +17,22 @@
         background-size: contain
 
   .example
-    cart
-    checkout
-      max-width: 400px
+    .image
+      text-align: center
 
-      +below(800px)
-        transform: translateX(50vw) translateX(-50%);
+      & >
+        &cart
+        &checkout
+          max-width: 400px
 
-    cart
-      float: right
+          +below(800px)
+            transform: translateX(50vw) translateX(-50%);
 
-      +below(800px)
-        float: left
+        &cart
+          float: right
 
-    checkout
-      float: left
+          +below(800px)
+            float: left
+
+        &checkout
+          float: left
