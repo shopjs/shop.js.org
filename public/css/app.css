@@ -578,7 +578,7 @@ reset-password-complete .selectize-input,
 shippingaddress .selectize-input{
   background-color:transparent !important;
   font-weight:bold !important;
-  color:#fff !important;
+  color:$textColor1 !important;
   font-size:1rem !important;
   line-height:1rem !important;
   padding:8px 0 !important;
@@ -2139,6 +2139,9 @@ checkout-shippingaddress .stripe-logo{
   top:10px;
   right:20px;
   color:#fff;
+  -webkit-transform:rotate(180deg);
+          transform:rotate(180deg);
+  cursor:pointer;
 }
 .checkout-content{
   display:table;
