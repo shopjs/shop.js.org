@@ -8,6 +8,8 @@ $document.ready ->
 
   m = getMediator()
 
+  window.m = m
+
   Shop.setItem 'red-shirt', 1
   Shop.setItem 'green-shirt', 2
 

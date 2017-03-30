@@ -54,19 +54,19 @@ shippingaddress
       font-weight: 400
       color: $themeTextColor
 
-  .selectize-dropdown.single
-    border-radius: 0 !important
-    z-index: 100001
+.selectize-dropdown.single
+  border-radius: 0 !important
+  z-index: 1003
 
-    .selectize-dropdown-content
-      font-weight: 400 !important
-      color: $textColor1 !important
-      font-size: 1rem !important
-      line-height: 1rem !important
+  .selectize-dropdown-content
+    font-weight: 400 !important
+    color: $themeTextColor !important
+    font-size: 1rem !important
+    line-height: 1rem !important
 
-    .option.active
-      background-color: $selectActiveBackgroundColor1 !important
-      color: $selectActiveColor1 !important
+  .option.active
+    background-color: $themeAccentColor !important
+    color: $themeTextColorInverted !important
 
-  .selectize-control
-    height: $themeElementHeight
+.selectize-control
+  height: $themeElementHeight

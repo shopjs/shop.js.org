@@ -1,6 +1,8 @@
 $checkoutCardHeight = 22px
 
 checkout
+checkout-card
+checkout-shippingaddress
   width: 100%
   display: table
   padding: $themeElementPadding
@@ -8,12 +10,21 @@ checkout
 
   .checkout-section
     margin-bottom: $themeElementPadding
-
-  .lock-icon
-    height: 16px
     position: relative
-    top: 2px
-    left: 4px
+
+    .secured-text
+      position: relative
+      right: 0
+      height: 0
+      top: calc(-1.75em - 10px)
+      display: block
+      float: right
+
+      .lock-icon
+        height: 16px
+        position: relative
+        top: 2px
+        left: 4px
 
   shippingaddress-line1.input.input
     column .6 3 $themeElementPadding
@@ -40,25 +51,21 @@ checkout
         margin-right:4px
         float: left
         opacity: .5
+        transition opacity $themeTransitionTime ease-in-out
 
-    .amex ~ .cards-accepted
-      .amex-logo
+    &.amex .cards-accepted .amex-logo
         opacity: 1
 
-    .discover ~ .cards-accepted
-      .discover-logo
+    &.discover .cards-accepted .discover-logo
         opacity: 1
 
-    .jcb ~ .cards-accepted
-      .jcb-logo
+    &.jcb .cards-accepted .jcb-logo
         opacity: 1
 
-    .mastercard ~ .cards-accepted
-      .mastercard-logo
-        opacity: 1
+    &.mastercard .cards-accepted .mastercard-logo
+      opacity: 1
 
-    .visa ~ .cards-accepted
-      .visa-logo
+    &.visa .cards-accepted .visa-logo
         opacity: 1
 
   .stripe-logo

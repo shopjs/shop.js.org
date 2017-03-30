@@ -37,6 +37,36 @@
     <script src="/js/polyfill/html5-shiv.js"></script><![endif]-->
   </head>
   <body>
+    <script>
+      var images = {
+        'red-shirt': '/img/red.png',
+        'green-shirt': '/img/green.png',
+      };
+      
+      var openCart = function() {
+        window.m.trigger('side-pane-open', 'side-cart')
+      }
+      
+    </script>
+    <side-pane id="side-cart">
+      <cart images="{ images }"></cart>
+    </side-pane>
+    <script>
+      var images = {
+        'red-shirt': '/img/red.png',
+        'green-shirt': '/img/green.png',
+      };
+      
+      var openModal = function() {
+        window.m.trigger('checkout-open', 'checkout')
+      }
+      
+    </script>
+    <checkout-modal id="checkout" images="{ images }">
+      <div class="thankyou">
+        <h2>Thank You!</h2>
+      </div>
+    </checkout-modal>
     <!--(style='overflow:hidden')-->
     <!-- Header-->
     <header>
@@ -66,7 +96,7 @@
             </div>
             <div class="image">
               <script>
-                window.images = {
+                var images = {
                   'red-shirt': '/img/red.png',
                   'green-shirt': '/img/green.png',
                 };
@@ -99,6 +129,56 @@
             </div>
             <div class="image">
               <checkout terms-url="/terms"></checkout>
+            </div>
+            <!-- p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="Shop.js Example 1",class="codepen")-->
+            <!--   | See the Pen-->
+            <!--   a(href="https://codepen.io/hanzo-io/pen/bqKGLb/")-->
+            <!--     | Shop.js Example 1-->
+            <!--   | by Hanzo (-->
+            <!--   a(href="http://codepen.io/hanzo-io")-->
+            <!--     | @hanzo-io) on-->
+            <!--   a(href="http://codepen.io")-->
+            <!--     | CodePen.-->
+            <!-- script(async,src="https://production-assets.codepen.io/assets/embed/ei.js")-->
+          </div>
+        </section>
+        <section class="full example example3 list right">
+          <div class="content">
+            <h2>Side Cart</h2>
+            <div class="info">
+              <pre><code class="language-html"></code></pre>
+              <p>
+                Hearts of the stars Cambrian explosion. The carbon in our apple pies culture hydrogen atoms cosmic fugue network of wormholes muse about. Cambrian explosion trillion galaxies, shores of the cosmic ocean. The only home we've ever known decipherment, ship of the imagination, great turbulent clouds bits of moving fluff, finite but unbounded rogue brain is the seed of intelligence corpus callosum take root and flourish, Orion's sword. Decipherment. Tendrils of gossamer clouds culture, another world, hearts of the stars.
+                
+              </p>
+            </div>
+            <div class="image">
+              <button onclick="openCart()">Open the Side Cart</button>
+            </div>
+            <!-- p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="Shop.js Example 1",class="codepen")-->
+            <!--   | See the Pen-->
+            <!--   a(href="https://codepen.io/hanzo-io/pen/bqKGLb/")-->
+            <!--     | Shop.js Example 1-->
+            <!--   | by Hanzo (-->
+            <!--   a(href="http://codepen.io/hanzo-io")-->
+            <!--     | @hanzo-io) on-->
+            <!--   a(href="http://codepen.io")-->
+            <!--     | CodePen.-->
+            <!-- script(async,src="https://production-assets.codepen.io/assets/embed/ei.js")-->
+          </div>
+        </section>
+        <section class="full example example4 list left">
+          <div class="content">
+            <h2>Checkout Modal</h2>
+            <div class="info">
+              <pre><code class="language-html"></code></pre>
+              <p>
+                Hearts of the stars Cambrian explosion. The carbon in our apple pies culture hydrogen atoms cosmic fugue network of wormholes muse about. Cambrian explosion trillion galaxies, shores of the cosmic ocean. The only home we've ever known decipherment, ship of the imagination, great turbulent clouds bits of moving fluff, finite but unbounded rogue brain is the seed of intelligence corpus callosum take root and flourish, Orion's sword. Decipherment. Tendrils of gossamer clouds culture, another world, hearts of the stars.
+                
+              </p>
+            </div>
+            <div class="image">
+              <button onclick="openModal()">Open the Checkout Modal</button>
             </div>
             <!-- p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="Shop.js Example 1",class="codepen")-->
             <!--   | See the Pen-->

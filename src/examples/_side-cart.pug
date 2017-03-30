@@ -1,0 +1,14 @@
+script.
+  var images = {
+    'red-shirt': '/img/red.png',
+    'green-shirt': '/img/green.png',
+  };
+
+  var openCart = function() {
+    window.m.trigger('side-pane-open', 'side-cart')
+  }
+
+side-pane(id='side-cart')
+  cart(images='{ images }')
+
+
