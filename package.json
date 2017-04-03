@@ -5,13 +5,13 @@
   "author": "Hanzo, Inc <hi@hanzo.io> (http://hanzo.io)",
   "devDependencies": {
     "autoprefixer": "6.7.7",
-    "bebop": "1.11.5",
-    "cake-bundle": "0.2.9",
+    "bebop": "1.11.6",
+    "cake-bundle": "0.2.21",
     "cake-linked": "0.1.0",
-    "cake-outdated": "0.1.15",
+    "cake-outdated": "0.1.18",
     "cake-publish": "0.1.10",
     "cake-test": "0.1.0",
-    "cake-version": "0.1.11",
+    "cake-version": "0.1.15",
     "cake-yarn": "0.1.1",
     "clean-css": "4.0.10",
     "coffee-script": "1.12.4",
@@ -28,14 +28,14 @@
     "rucksack-css": "0.9.1",
     "rupture": "0.6.2",
     "selectize": "0.12.4",
-    "shortcake": "1.2.5",
+    "shortcake": "1.2.8",
     "stylus": "0.54.5"
   },
   "dependencies": {
     "akasha": "0.1.1",
     "debounce": "1.0.0",
     "prismjs": "1.6.0",
-    "shop.js": "2.0.13"
+    "shop.js": "2.0.15"
   },
   "repository": "ssh://github.com/hanzo-io/shop.js-site",
   "private": true
