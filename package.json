@@ -5,7 +5,7 @@
   "author": "Hanzo, Inc <hi@hanzo.io> (http://hanzo.io)",
   "devDependencies": {
     "autoprefixer": "6.7.7",
-    "bebop": "1.11.6",
+    "bebop": "1.12.0",
     "cake-bundle": "0.2.21",
     "cake-linked": "0.1.0",
     "cake-outdated": "0.1.18",
@@ -35,7 +35,7 @@
     "akasha": "0.1.1",
     "debounce": "1.0.0",
     "prismjs": "1.6.0",
-    "shop.js": "2.0.15"
+    "shop.js": "2.0.16"
   },
   "repository": "ssh://github.com/hanzo-io/shop.js-site",
   "private": true
