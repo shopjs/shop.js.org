@@ -10,26 +10,46 @@ block content
         h1 Shop.js
         h4
           strong One Library For All Your Ecommerce Needs
-        p Cosmic fugue rich in mystery, great turbulent clouds Orion's sword. Consciousness, star stuff harvesting star light the only home we've ever known muse about, culture permanence of the stars, Apollonius of Perga white dwarf. Euclid, rich in heavy atoms kindling the energy hidden in matter culture circumnavigated birth rogue cosmic ocean concept of the number one? At the edge of forever paroxysm of global death star stuff harvesting star light, Orion's sword tendrils of gossamer clouds are creatures of the cosmos hearts of the stars. Finite but unbounded. A mote of dust suspended in a sunbeam birth.
+        p
+          | shop.js is a collection of highly customizeable e-commerce UI
+          | elements designed to support any checkout flow for Hanzo.
       // .content
       //   a.pre-order-button.button(href='#')
       //     span Try Now
-    section.full.example.example1.list.right
+    section.example.bootstrap
+      .content
+        h2
+          | Getting Started
+        .language
+          pre
+            code
+        p.
+          Include shop.js in your javascript and initialize using your Hanzo key
+          to begin using it. Integrating shop.js Elements is as simple as inserting custom
+          tags into your existing html page.
+
+
+    section.example.example1.list.right
       .content
         h2
           | Carts
         .info
-          pre
-            code.language-html
+          .language
+            pre
+              code
           p.
-            Laws of physics great turbulent clouds a very small stage in a vast cosmic arena, not a sunrise but a galaxyrise descended from astronomers from which we spring. The carbon in our apple pies a mote of dust suspended in a sunbeam hundreds of thousands gathered by gravity encyclopaedia galactica Jean-FranÃƒÂ§ois Champollion, shores of the cosmic ocean a billion trillion descended from astronomers trillion.
+            Carts display what items your customers have added to their carts,
+            show customers theri totals, and allow customers to input coupons.
+            In this example you case use the custom coupon <strong>GETSHOPJS</strong>.
+          button(onclick='addRedShirt()') Add Red Shirt
+          button(onclick='addGreenShirt()') Add Green Shirt
 
         .image
           include examples/_cart.pug
-        // p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="Shop.js Example 1",class="codepen")
+        // p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="shop.js Example 1",class="codepen")
         //   | See the Pen
         //   a(href="https://codepen.io/hanzo-io/pen/bqKGLb/")
-        //     | Shop.js Example 1
+        //     | shop.js Example 1
         //   | by Hanzo (
         //   a(href="http://codepen.io/hanzo-io")
         //     | @hanzo-io) on
@@ -37,24 +57,24 @@ block content
         //     | CodePen.
         // script(async,src="https://production-assets.codepen.io/assets/embed/ei.js")
 
-    section.full.example.example2.list.left
+    section.example.example2.list.left
       .content
         h2
           | Checkout
         .info
-          pre
-            code.language-html
+          .language
+            pre
+              code
           p.
-            Sea of Tranquility, a billion trillion star stuff harvesting star light the ash of stellar alchemy! Prime number citizens of distant epochs hydrogen atoms, tendrils of gossamer clouds shores of the cosmic ocean realm of the galaxies, consciousness? Star stuff harvesting star light rich in mystery. Ship of the imagination prime number galaxies Euclid paroxysm of global death two ghostly white figures in coveralls and helmets are soflty dancing birth Hypatia! Muse about, finite but unbounded Orion's sword muse about.
-          p.
-            Cosmic fugue a still more glorious dawn awaits take root and flourish bits of moving fluff the sky calls to us permanence of the stars inconspicuous motes of rock and gas paroxysm of global death? Not a sunrise but a galaxyrise Rig Veda! From which we spring? Stirred by starlight tendrils of gossamer clouds, venture, galaxies at the edge of forever intelligent beings hydrogen atoms, another world from which we spring corpus callosum cosmic ocean trillion. Emerged into consciousness! Hearts of the stars take root and flourish circumnavigated, laws of physics and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+            Checkouts allow users to input credit card information to pay for
+            their purchases.
 
         .image
           include examples/_checkout.pug
-        // p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="Shop.js Example 1",class="codepen")
+        // p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="shop.js Example 1",class="codepen")
         //   | See the Pen
         //   a(href="https://codepen.io/hanzo-io/pen/bqKGLb/")
-        //     | Shop.js Example 1
+        //     | shop.js Example 1
         //   | by Hanzo (
         //   a(href="http://codepen.io/hanzo-io")
         //     | @hanzo-io) on
@@ -62,23 +82,23 @@ block content
         //     | CodePen.
         // script(async,src="https://production-assets.codepen.io/assets/embed/ei.js")
 
-    section.full.example.example3.list.right
+    section.example.example3
       .content
         h2
           | Side Cart
-        .info
+        .language
           pre
-            code.language-html
-          p.
-            Hearts of the stars Cambrian explosion. The carbon in our apple pies culture hydrogen atoms cosmic fugue network of wormholes muse about. Cambrian explosion trillion galaxies, shores of the cosmic ocean. The only home we've ever known decipherment, ship of the imagination, great turbulent clouds bits of moving fluff, finite but unbounded rogue brain is the seed of intelligence corpus callosum take root and flourish, Orion's sword. Decipherment. Tendrils of gossamer clouds culture, another world, hearts of the stars.
+            code
+        p.
+          Carts can be embeded in a side pane and opened by triggering a
+          'side-pane-open' even with the id of the side pane.
 
-        .image
-          button(onclick='openCart()')
-            | Open the Side Cart
-        // p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="Shop.js Example 1",class="codepen")
+        button(onclick='openCart()')
+          | Open the Side Cart
+        // p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="shop.js Example 1",class="codepen")
         //   | See the Pen
         //   a(href="https://codepen.io/hanzo-io/pen/bqKGLb/")
-        //     | Shop.js Example 1
+        //     | shop.js Example 1
         //   | by Hanzo (
         //   a(href="http://codepen.io/hanzo-io")
         //     | @hanzo-io) on
@@ -86,26 +106,43 @@ block content
         //     | CodePen.
         // script(async,src="https://production-assets.codepen.io/assets/embed/ei.js")
 
-    section.full.example.example4.list.left
+    section.example.example4
       .content
         h2
           | Checkout Modal
-        .info
+        .language
           pre
-            code.language-html
-          p.
-            Hearts of the stars Cambrian explosion. The carbon in our apple pies culture hydrogen atoms cosmic fugue network of wormholes muse about. Cambrian explosion trillion galaxies, shores of the cosmic ocean. The only home we've ever known decipherment, ship of the imagination, great turbulent clouds bits of moving fluff, finite but unbounded rogue brain is the seed of intelligence corpus callosum take root and flourish, Orion's sword. Decipherment. Tendrils of gossamer clouds culture, another world, hearts of the stars.
+            code
+        p.
+          Shop.js includes a prebuilt responsive checkout modal for quickly
+          dropping into your ecommerce site.  Start taking payments immediately
+          while building out the rest of your online store.
 
-        .image
-          button(onclick='openModal()')
-            | Open the Checkout Modal
-        // p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="Shop.js Example 1",class="codepen")
+        button(onclick='openModal()')
+          | Open the Checkout Modal
+        // p(data-height="300",data-theme-id="28315",data-slug-hash="bqKGLb",data-default-tab="result",data-user="hanzo-io",data-embed-version="2",data-pen-title="shop.js Example 1",class="codepen")
         //   | See the Pen
         //   a(href="https://codepen.io/hanzo-io/pen/bqKGLb/")
-        //     | Shop.js Example 1
+        //     | shop.js Example 1
         //   | by Hanzo (
         //   a(href="http://codepen.io/hanzo-io")
         //     | @hanzo-io) on
         //   a(href="http://codepen.io")
         //     | CodePen.
         // script(async,src="https://production-assets.codepen.io/assets/embed/ei.js")
+        //
+    section
+      .content
+        h2
+          | And More!
+        p.
+          Over the upcoming months, Shop.js will start supporting product
+          cards, store pages, user self-management and much, much, more!
+
+    section.example.install
+      .content
+        h2
+          | Installation
+        .language
+          pre
+            code
