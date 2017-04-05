@@ -8,6 +8,21 @@ body
     height: 105vh
     min-height: 600px
 
+  .hero
+    .content
+      max-width: 600px
+
+  .content > button
+  .info > button
+      font-size: 1em
+      color: $textColor1
+      background-color: transparent
+      border: 2px solid $textColor1
+
+  .language
+    overflow: auto
+    width: 100%
+
   pre[class*="language-"]
     margin: 0
     margin-bottom: 20px
@@ -19,19 +34,42 @@ body
       display: table
       padding: 0
 
+      h2
+        margin: .5em
+
     .info
       margin-bottom: 40px
       min-height: 0
-
-      h2
-        padding: 0 20px
 
       +below(800px)
         margin-right: 0px
 
     .image
       min-height: 0
+      overflow: auto
+      padding: 0 20px
+
+      & > *
+        position: relative
+        +below(800px)
+          margin-left: -20px
 
     .info
       padding: 0 20px
+
+
+footer
+  margin-top: 100px
+
+  .hanzo
+    color: $textColor1
+    display: block
+
+    margin: 2em 0
+    img
+      height: 2.8em
+      display: inline-block
+      margin: 0 1em
+    h1
+      display: inline-block
 

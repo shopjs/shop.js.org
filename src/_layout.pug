@@ -50,9 +50,6 @@ html(lang='en')
     <![endif]-->
 
   body
-    include examples/_side-cart.pug
-    include examples/_checkout-modal.pug
-
     //(style='overflow:hidden')
     // Header
     block preheader
@@ -60,29 +57,37 @@ html(lang='en')
     block header
       header
         nav.right.buttons
-          a.pre-order-button.button(href='#')
+          a.pre-order-button.button(href='https://github.com/hanzo-io/shop.js',target='_blank')
             span Fork on github
     main
       block content
 
     footer
-      nav.social
-        ul
-          li
-            a#social-facebook(href='https://www.facebook.com/hanzo', target='_blank')
-              i.fa.fa-facebook-square
-          li
-            a#social-twitter(href='https://twitter.com/hanzo', target='_blank')
-              i.fa.fa-twitter
+      h4.built-by built by
+      a.hanzo(href='https://hanzo.io')
+        img(src='https://hanzo.io/img/logo.png')
+        h1 Hanzo
 
-      form.email-form
-        script(src='')
-        p Sign up for Hanzo Beta
-        input(id='email', name='email', placeholder='YOUR E-MAIL')
-        button(type='submit') SIGN&nbsp;UP
-        .error
+      // nav.social
+      //   ul
+      //     li
+      //       a#social-facebook(href='https://www.facebook.com/hanzo', target='_blank')
+      //         i.fa.fa-facebook-square
+      //     li
+      //       a#social-twitter(href='https://twitter.com/hanzo', target='_blank')
+      //         i.fa.fa-twitter
+
+      // form.email-form
+      //   script(src='')
+      //   p Sign up for Hanzo Beta
+      //   input(id='email', name='email', placeholder='YOUR E-MAIL')
+      //   button(type='submit') SIGN&nbsp;UP
+      //   .error
 
       small.copyright © Hanzo, LLC 2017
+    include examples/_side-cart.pug
+    include examples/_checkout-modal.pug
+
 
     <!--[if IE]>
     .browserupgrade
