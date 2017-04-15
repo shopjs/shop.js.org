@@ -6,7 +6,7 @@ Website for [Shop.js](https://github.com/hanzo-io/shop.js).
 Logo made by [Freepik](http://www.flaticon.com/authors/freepik) from [Flaticon](www.flaticon.com).
 
 ## License
-[MIT][license-url]
+[BSD][license-url]
 
 [build-img]:        https://img.shields.io/travis/hanzo-io/getshopjs.com.svg
 [build-url]:        https://travis-ci.org/hanzo-io/getshopjs.com
