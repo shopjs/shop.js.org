@@ -1,12 +1,10 @@
-require 'shortcake'
+use 'sake-bundle'
+use 'sake-linked'
+use 'sake-outdated'
+use 'sake-test'
+use 'sake-version'
 
-use 'cake-bundle'
-use 'cake-linked'
-use 'cake-outdated'
-use 'cake-test'
-use 'cake-version'
-
-use 'cake-publish',
+use 'sake-publish',
   deploy:
     remote:  'origin'
     refspec: 'master:master'
