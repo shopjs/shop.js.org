@@ -575,6 +575,7 @@ shippingaddress .input .placeholder{
   top:2px;
   position:absolute;
   transition:all 250ms linear;
+  pointer-events:none;
 }
 cart .input .valid + .placeholder,
 checkout .input .valid + .placeholder,
@@ -813,6 +814,7 @@ reset-password .input .error,
 reset-password-complete .input .error,
 shippingaddress .input .error{
   color:#f22469;
+  font-size:0.75em;
 }
 cart .input.input.input,
 checkout .input.input.input,
