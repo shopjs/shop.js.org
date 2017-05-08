@@ -2083,8 +2083,17 @@ body .full{
 body .hero .content{
   max-width:600px;
 }
+body .hero .git-icons > *{
+  margin:0.5em;
+}
+body .hero .button,
+body .hero button{
+  margin-right:4px;
+}
 body .content > button,
-body .info > button{
+body .info > button,
+body .content > .button,
+body .info > .button{
   font-size:1em;
   color:#fff;
   background-color:transparent;
@@ -2173,6 +2182,20 @@ footer .hanzo h1{
 
   .hero{
     min-height:400px;
+  }
+
+  cart .secured-text span,
+  checkout .secured-text span,
+  checkout-card .secured-text span,
+  checkout-shippingaddress .secured-text span,
+  login .secured-text span,
+  orders .secured-text span,
+  profile .secured-text span,
+  register .secured-text span,
+  reset-password .secured-text span,
+  reset-password-complete .secured-text span,
+  shippingaddress .secured-text span{
+    display:none;
   }
 
   cart .product-description{
