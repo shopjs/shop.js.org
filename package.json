@@ -11,7 +11,7 @@
     "akasha": "0.1.9",
     "debounce": "1.0.2",
     "prismjs": "1.6.0",
-    "shop.js": "2.1.19"
+    "shop.js": "2.1.20"
   },
   "devDependencies": {
     "autoprefixer": "7.0.1",
