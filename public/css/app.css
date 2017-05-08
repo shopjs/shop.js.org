@@ -576,6 +576,7 @@ shippingaddress .input .placeholder{
   position:absolute;
   transition:all 250ms linear;
   pointer-events:none;
+  line-height:1em;
 }
 cart .input .valid + .placeholder,
 checkout .input .valid + .placeholder,
@@ -602,6 +603,24 @@ reset-password .input .invalid + .placeholder,
 reset-password-complete .input .invalid + .placeholder,
 shippingaddress .input .invalid + .placeholder{
   color:#f22469;
+}
+cart .input .error,
+checkout .input .error,
+checkout-card .input .error,
+checkout-shippingaddress .input .error,
+login .input .error,
+orders .input .error,
+profile .input .error,
+register .input .error,
+reset-password .input .error,
+reset-password-complete .input .error,
+shippingaddress .input .error{
+  right:0;
+  top:-6px;
+  position:absolute;
+  color:#f22469;
+  font-size:0.75em;
+  line-height:1em;
 }
 cart .input input:focus + .placeholder,
 checkout .input input:focus + .placeholder,
@@ -802,20 +821,6 @@ shippingaddress .input textarea{
   width:100%;
   font-size:1em;
 }
-cart .input .error,
-checkout .input .error,
-checkout-card .input .error,
-checkout-shippingaddress .input .error,
-login .input .error,
-orders .input .error,
-profile .input .error,
-register .input .error,
-reset-password .input .error,
-reset-password-complete .input .error,
-shippingaddress .input .error{
-  color:#f22469;
-  font-size:0.75em;
-}
 cart .input.input.input,
 checkout .input.input.input,
 checkout-card .input.input.input,
@@ -840,7 +845,7 @@ reset-password-complete .input .input.input,
 shippingaddress .input .input.input{
   width:100%;
   display:block;
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 cart .input.input.input .valid,
 checkout .input.input.input .valid,
@@ -1204,6 +1209,19 @@ reset-password-complete .fields,
 shippingaddress .fields{
   display:table;
   width:100%;
+}
+cart .input,
+checkout .input,
+checkout-card .input,
+checkout-shippingaddress .input,
+login .input,
+orders .input,
+profile .input,
+register .input,
+reset-password .input,
+reset-password-complete .input,
+shippingaddress .input{
+  margin-bottom:0.5em;
 }
 cart h2,
 checkout h2,
