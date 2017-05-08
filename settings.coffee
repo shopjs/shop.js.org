@@ -22,13 +22,13 @@ module.exports =
     facebook:
       appid:       '1648878842071733'
       description: description
-      image:       'https://stoned.audio/img/fbshare.jpg'
-      title:       'Get Stoned'
+      image:       'https://getshopjs.com/img/logo.png'
+      title:       'Get Shop.js'
 
     twitter:
       description: description
-      image:       'https://stoned.audio/img/twittershare.jpg'
-      title:       'Get Stoned'
+      image:       'https://getshopjs.com/img/logo.png'
+      title:       'Get Shop.js'
 
   social:
     twitter:
