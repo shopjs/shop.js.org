@@ -2,6 +2,14 @@
 
 Website for [Shop.js](https://github.com/hanzo-io/shop.js).
 
+## Install
+```bash
+$ git clone https://github.com/hanzo-io/shop.js
+$ cd shop.js
+$ npm install
+$ npm build
+```
+
 ## Credit
 Logo made by [Freepik](http://www.flaticon.com/authors/freepik) from [Flaticon](www.flaticon.com).
 
