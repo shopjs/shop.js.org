@@ -9,7 +9,7 @@ block content
       .content.title
         h1 Shop.js
         h4
-          strong One Library For All Your Ecommerce Needs
+          strong Ecommerce UI components and framework powered by El.js and Hanzo
         .git-icons
           a(href='https://www.npmjs.com/package/shop.js')
             img(src='https://camo.githubusercontent.com/c3c18ca40e4bfd2c0fcce7ff42f2dbfbb37b30c6/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f73686f702e6a732e737667', alt='npm', data-canonical-src='https://img.shields.io/npm/v/shop.js.svg', style='max-width:100%;')
@@ -29,8 +29,9 @@ block content
           a(href='https://gitter.im/hanzo-io/chat')
             img(src='https://camo.githubusercontent.com/5f28bca633a0b7baa4b8a3585a0ed3fd5cad5716/68747470733a2f2f6261646765732e6769747465722e696d2f6a6f696e2d636861742e737667', alt='chat', data-canonical-src='https://badges.gitter.im/join-chat.svg', style='max-width:100%;')
         p
-          | Shop.js is a collection of highly customizeable e-commerce UI
-          | elements designed to support any checkout flow for Hanzo.
+          | Shop.js is a complete set of reactive Ecommerce components powered
+          | by El.js. With Hanzo, it can be easily integrated into any
+          | website, no backend required.
         a.button(href='https://github.com/hanzo-io/shop.js')
           span Get on Github
         a.button(href='https://raw.githubusercontent.com/hanzo-io/shop.js/master/shop.min.js', download)
@@ -44,23 +45,23 @@ block content
           pre
             code
         p.
-          Include shop.js in your javascript and initialize using your Hanzo key
-          to begin using it. Integrating shop.js Elements is as simple as inserting custom
-          tags into your existing html page.
-
+          Include Shop.js in your project and configure your Hanzo API key.
+          Integrating Shop.js components is as simple as inserting our custom
+          tags into your existing HTML.
 
     section.example.example1.list.right
       .content
         h2
-          | Carts
+          | Cart
         .info
           .language
             pre
               code
           p.
-            Carts display what items your customers have added to their carts,
-            show customers theri totals, and allow customers to input coupons.
-            In this example you case use the custom coupon <strong>GETSHOPJS</strong>.
+            The Cart component can display items your customer has added to their
+            order, show order subtotal and allow customers to input coupons.
+            Try using <strong>GETSHOPJS</strong> to see how easy it is to apply
+            a coupon to an order.
           button(onclick='addRedShirt()') Add Red Shirt
           button(onclick='addGreenShirt()') Add Green Shirt
 
@@ -86,7 +87,7 @@ block content
             pre
               code
           p.
-            Checkouts allow users to input credit card information to pay for
+            The Checkout component allow users to input credit card information to pay for
             their purchases.
 
         .image
@@ -110,8 +111,8 @@ block content
           pre
             code
         p.
-          Carts can be embeded in a side pane and opened by triggering a
-          'side-pane-open' even with the id of the side pane.
+          A Cart can be embedded in a side pane and opened by triggering a
+          'side-pane-open' event with the id of the side pane element.
 
         button(onclick='openCart()')
           | Open the Side Cart
@@ -134,9 +135,10 @@ block content
           pre
             code
         p.
-          Shop.js includes a prebuilt responsive checkout modal for quickly
-          dropping into your ecommerce site.  Start taking payments immediately
-          while building out the rest of your online store.
+          Shop.js includes a beautiful, fully responsive Checkout Modal
+          component for getting started collecting payments quickly. Designed
+          for crowdfunding launches, companies have collected millions of
+          dollars using nothing more than this component.
 
         button(onclick='openModal()')
           | Open the Checkout Modal
@@ -154,10 +156,11 @@ block content
     section
       .content
         h2
-          | And More!
+          | Coming soon
         p.
-          Over the upcoming months, Shop.js will start supporting product
-          cards, store pages, user self-management and much, much, more!
+          As we continue to open source more of Hanzo's built-in components,
+          look forward to new components supporting product cards, search, user
+          management and more.
 
     section.example.install
       .content
