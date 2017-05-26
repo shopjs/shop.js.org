@@ -578,19 +578,6 @@ shippingaddress .input .placeholder{
   pointer-events:none;
   line-height:1em;
 }
-cart .input .valid + .placeholder,
-checkout .input .valid + .placeholder,
-checkout-card .input .valid + .placeholder,
-checkout-shippingaddress .input .valid + .placeholder,
-login .input .valid + .placeholder,
-orders .input .valid + .placeholder,
-profile .input .valid + .placeholder,
-register .input .valid + .placeholder,
-reset-password .input .valid + .placeholder,
-reset-password-complete .input .valid + .placeholder,
-shippingaddress .input .valid + .placeholder{
-  color:#17bebb;
-}
 cart .input .invalid + .placeholder,
 checkout .input .invalid + .placeholder,
 checkout-card .input .invalid + .placeholder,
@@ -633,6 +620,17 @@ register .input input:focus + .placeholder,
 reset-password .input input:focus + .placeholder,
 reset-password-complete .input input:focus + .placeholder,
 shippingaddress .input input:focus + .placeholder,
+cart .input input:hover + .placeholder,
+checkout .input input:hover + .placeholder,
+checkout-card .input input:hover + .placeholder,
+checkout-shippingaddress .input input:hover + .placeholder,
+login .input input:hover + .placeholder,
+orders .input input:hover + .placeholder,
+profile .input input:hover + .placeholder,
+register .input input:hover + .placeholder,
+reset-password .input input:hover + .placeholder,
+reset-password-complete .input input:hover + .placeholder,
+shippingaddress .input input:hover + .placeholder,
 cart .input .placeholder.small,
 checkout .input .placeholder.small,
 checkout-card .input .placeholder.small,
@@ -846,30 +844,6 @@ shippingaddress .input .input.input{
   width:100%;
   display:block;
   margin-bottom:20px;
-}
-cart .input.input.input .valid,
-checkout .input.input.input .valid,
-checkout-card .input.input.input .valid,
-checkout-shippingaddress .input.input.input .valid,
-login .input.input.input .valid,
-orders .input.input.input .valid,
-profile .input.input.input .valid,
-register .input.input.input .valid,
-reset-password .input.input.input .valid,
-reset-password-complete .input.input.input .valid,
-shippingaddress .input.input.input .valid,
-cart .input .input.input .valid,
-checkout .input .input.input .valid,
-checkout-card .input .input.input .valid,
-checkout-shippingaddress .input .input.input .valid,
-login .input .input.input .valid,
-orders .input .input.input .valid,
-profile .input .input.input .valid,
-register .input .input.input .valid,
-reset-password .input .input.input .valid,
-reset-password-complete .input .input.input .valid,
-shippingaddress .input .input.input .valid{
-  border-color:#17bebb;
 }
 cart .input.input.input .invalid,
 checkout .input.input.input .invalid,
