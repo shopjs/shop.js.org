@@ -560,6 +560,32 @@ shippingaddress .input{
   color:#000;
   position:relative;
 }
+cart .input.input.input,
+checkout .input.input.input,
+checkout-card .input.input.input,
+checkout-shippingaddress .input.input.input,
+login .input.input.input,
+orders .input.input.input,
+profile .input.input.input,
+register .input.input.input,
+reset-password .input.input.input,
+reset-password-complete .input.input.input,
+shippingaddress .input.input.input,
+cart .input .input.input,
+checkout .input .input.input,
+checkout-card .input .input.input,
+checkout-shippingaddress .input .input.input,
+login .input .input.input,
+orders .input .input.input,
+profile .input .input.input,
+register .input .input.input,
+reset-password .input .input.input,
+reset-password-complete .input .input.input,
+shippingaddress .input .input.input{
+  width:100%;
+  display:table;
+  margin-bottom:20px;
+}
 cart .input .placeholder,
 checkout .input .placeholder,
 checkout-card .input .placeholder,
@@ -572,11 +598,12 @@ reset-password .input .placeholder,
 reset-password-complete .input .placeholder,
 shippingaddress .input .placeholder{
   left:0;
-  top:2px;
+  top:10px;
   position:absolute;
   transition:all 250ms linear;
   pointer-events:none;
   line-height:1em;
+  font-weight:normal;
 }
 cart .input .invalid + .placeholder,
 checkout .input .invalid + .placeholder,
@@ -842,7 +869,7 @@ reset-password .input .input.input,
 reset-password-complete .input .input.input,
 shippingaddress .input .input.input{
   width:100%;
-  display:block;
+  display:table;
   margin-bottom:20px;
 }
 cart .input.input.input .invalid,
@@ -1169,20 +1196,6 @@ reset-password-complete,
 shippingaddress{
   text-align:left;
   color:#000;
-}
-cart .fields,
-checkout .fields,
-checkout-card .fields,
-checkout-shippingaddress .fields,
-login .fields,
-orders .fields,
-profile .fields,
-register .fields,
-reset-password .fields,
-reset-password-complete .fields,
-shippingaddress .fields{
-  display:table;
-  width:100%;
 }
 cart .input,
 checkout .input,
@@ -1575,118 +1588,6 @@ checkout-shippingaddress .checkout-section .secured-text .lock-icon{
   position:relative;
   top:2px;
   left:4px;
-}
-checkout shippingaddress-line1.input.input,
-checkout-card shippingaddress-line1.input.input,
-checkout-shippingaddress shippingaddress-line1.input.input{
-  width:calc(99.9% * 0.6 - (20px - 20px * 0.6));
-}
-checkout shippingaddress-line1.input.input:nth-child(1n),
-checkout-card shippingaddress-line1.input.input:nth-child(1n),
-checkout-shippingaddress shippingaddress-line1.input.input:nth-child(1n){
-  float:left;
-  margin-right:20px;
-  clear:none;
-}
-checkout shippingaddress-line1.input.input:last-child,
-checkout-card shippingaddress-line1.input.input:last-child,
-checkout-shippingaddress shippingaddress-line1.input.input:last-child{
-  margin-right:0;
-}
-checkout shippingaddress-line1.input.input:nth-child(3n),
-checkout-card shippingaddress-line1.input.input:nth-child(3n),
-checkout-shippingaddress shippingaddress-line1.input.input:nth-child(3n){
-  margin-right:0;
-  float:right;
-}
-checkout shippingaddress-line1.input.input:nth-child(3n + 1),
-checkout-card shippingaddress-line1.input.input:nth-child(3n + 1),
-checkout-shippingaddress shippingaddress-line1.input.input:nth-child(3n + 1){
-  clear:both;
-}
-checkout shippingaddress-line2.input.input,
-checkout-card shippingaddress-line2.input.input,
-checkout-shippingaddress shippingaddress-line2.input.input{
-  width:calc(99.9% * 0.4 - (20px - 20px * 0.4));
-}
-checkout shippingaddress-line2.input.input:nth-child(1n),
-checkout-card shippingaddress-line2.input.input:nth-child(1n),
-checkout-shippingaddress shippingaddress-line2.input.input:nth-child(1n){
-  float:left;
-  margin-right:20px;
-  clear:none;
-}
-checkout shippingaddress-line2.input.input:last-child,
-checkout-card shippingaddress-line2.input.input:last-child,
-checkout-shippingaddress shippingaddress-line2.input.input:last-child{
-  margin-right:0;
-}
-checkout shippingaddress-line2.input.input:nth-child(3n),
-checkout-card shippingaddress-line2.input.input:nth-child(3n),
-checkout-shippingaddress shippingaddress-line2.input.input:nth-child(3n){
-  margin-right:0;
-  float:right;
-}
-checkout shippingaddress-line2.input.input:nth-child(3n + 1),
-checkout-card shippingaddress-line2.input.input:nth-child(3n + 1),
-checkout-shippingaddress shippingaddress-line2.input.input:nth-child(3n + 1){
-  clear:both;
-}
-checkout card-expiry.input.input,
-checkout-card card-expiry.input.input,
-checkout-shippingaddress card-expiry.input.input{
-  width:calc(99.9% * 0.7 - (20px - 20px * 0.7));
-}
-checkout card-expiry.input.input:nth-child(1n),
-checkout-card card-expiry.input.input:nth-child(1n),
-checkout-shippingaddress card-expiry.input.input:nth-child(1n){
-  float:left;
-  margin-right:20px;
-  clear:none;
-}
-checkout card-expiry.input.input:last-child,
-checkout-card card-expiry.input.input:last-child,
-checkout-shippingaddress card-expiry.input.input:last-child{
-  margin-right:0;
-}
-checkout card-expiry.input.input:nth-child(4n),
-checkout-card card-expiry.input.input:nth-child(4n),
-checkout-shippingaddress card-expiry.input.input:nth-child(4n){
-  margin-right:0;
-  float:right;
-}
-checkout card-expiry.input.input:nth-child(4n + 1),
-checkout-card card-expiry.input.input:nth-child(4n + 1),
-checkout-shippingaddress card-expiry.input.input:nth-child(4n + 1){
-  clear:both;
-}
-checkout card-cvc.input.input,
-checkout-card card-cvc.input.input,
-checkout-shippingaddress card-cvc.input.input{
-  width:calc(99.9% * 0.3 - (20px - 20px * 0.3));
-}
-checkout card-cvc.input.input:nth-child(1n),
-checkout-card card-cvc.input.input:nth-child(1n),
-checkout-shippingaddress card-cvc.input.input:nth-child(1n){
-  float:left;
-  margin-right:20px;
-  clear:none;
-}
-checkout card-cvc.input.input:last-child,
-checkout-card card-cvc.input.input:last-child,
-checkout-shippingaddress card-cvc.input.input:last-child{
-  margin-right:0;
-}
-checkout card-cvc.input.input:nth-child(4n),
-checkout-card card-cvc.input.input:nth-child(4n),
-checkout-shippingaddress card-cvc.input.input:nth-child(4n){
-  margin-right:0;
-  float:right;
-}
-checkout card-cvc.input.input:nth-child(4n + 1),
-checkout-card card-cvc.input.input:nth-child(4n + 1),
-checkout-shippingaddress card-cvc.input.input:nth-child(4n + 1){
-  clear:both;
 }
 checkout card-number input,
 checkout-card card-number input,
