@@ -1,0 +1,37 @@
+extends _layout.pug
+
+block title
+  | #{site.title} - All templates test
+
+block content
+  #page-test
+    section
+      h2 Cart
+      cart
+    section
+      h2 Checkout Card Only
+      checkout-card
+
+    section
+      h2 Checkout Shipping Only
+      checkout-shippingaddress
+
+    section
+      h2 Checkout Combined
+      checkout
+
+    section
+      h2 Login
+      login
+
+    section
+      h2 Register
+      register
+
+    section
+      h2 Reset Password Step 1
+      reset-password
+
+    section
+      h2 Reset Password Step 2
+      reset-password-complete

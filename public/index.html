@@ -265,6 +265,9 @@
       
     </script>
     <checkout-modal id="checkout" images="{ images }">
+      <yield to="cart">
+        <test></test>
+      </yield>
       <div class="thankyou">
         <h2>Thank You!</h2>
       </div>

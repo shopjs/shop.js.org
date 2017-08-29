@@ -433,9 +433,38 @@ header nav.buttons .button{
   text-align:left;
   max-width:600px;
 }
+cart,
+checkout,
+checkout-card,
+checkout-modal,
+checkout-shippingaddress,
+login,
+orders,
+profile,
+register,
+reset-password,
+reset-password-complete,
+shippingaddress{
+  box-sizing:border-box;
+}
+cart *,
+checkout *,
+checkout-card *,
+checkout-modal *,
+checkout-shippingaddress *,
+login *,
+orders *,
+profile *,
+register *,
+reset-password *,
+reset-password-complete *,
+shippingaddress *{
+  box-sizing:border-box;
+}
 cart .input .selectize-input,
 checkout .input .selectize-input,
 checkout-card .input .selectize-input,
+checkout-modal .input .selectize-input,
 checkout-shippingaddress .input .selectize-input,
 login .input .selectize-input,
 orders .input .selectize-input,
@@ -460,6 +489,7 @@ shippingaddress .input .selectize-input{
 cart .input .selectize-input:after,
 checkout .input .selectize-input:after,
 checkout-card .input .selectize-input:after,
+checkout-modal .input .selectize-input:after,
 checkout-shippingaddress .input .selectize-input:after,
 login .input .selectize-input:after,
 orders .input .selectize-input:after,
@@ -476,6 +506,7 @@ shippingaddress .input .selectize-input:after{
 cart .input .selectize-input.dropdown-active:before,
 checkout .input .selectize-input.dropdown-active:before,
 checkout-card .input .selectize-input.dropdown-active:before,
+checkout-modal .input .selectize-input.dropdown-active:before,
 checkout-shippingaddress .input .selectize-input.dropdown-active:before,
 login .input .selectize-input.dropdown-active:before,
 orders .input .selectize-input.dropdown-active:before,
@@ -489,6 +520,7 @@ shippingaddress .input .selectize-input.dropdown-active:before{
 cart .input .selectize-input.dropdown-active:after,
 checkout .input .selectize-input.dropdown-active:after,
 checkout-card .input .selectize-input.dropdown-active:after,
+checkout-modal .input .selectize-input.dropdown-active:after,
 checkout-shippingaddress .input .selectize-input.dropdown-active:after,
 login .input .selectize-input.dropdown-active:after,
 orders .input .selectize-input.dropdown-active:after,
@@ -502,6 +534,7 @@ shippingaddress .input .selectize-input.dropdown-active:after{
 cart .input .selectize-input.full,
 checkout .input .selectize-input.full,
 checkout-card .input .selectize-input.full,
+checkout-modal .input .selectize-input.full,
 checkout-shippingaddress .input .selectize-input.full,
 login .input .selectize-input.full,
 orders .input .selectize-input.full,
@@ -515,6 +548,7 @@ shippingaddress .input .selectize-input.full{
 cart .input .selectize-input input,
 checkout .input .selectize-input input,
 checkout-card .input .selectize-input input,
+checkout-modal .input .selectize-input input,
 checkout-shippingaddress .input .selectize-input input,
 login .input .selectize-input input,
 orders .input .selectize-input input,
@@ -533,6 +567,7 @@ shippingaddress .input .selectize-input input{
 cart .input .selectize-input .item,
 checkout .input .selectize-input .item,
 checkout-card .input .selectize-input .item,
+checkout-modal .input .selectize-input .item,
 checkout-shippingaddress .input .selectize-input .item,
 login .input .selectize-input .item,
 orders .input .selectize-input .item,
@@ -549,6 +584,7 @@ shippingaddress .input .selectize-input .item{
 cart .input,
 checkout .input,
 checkout-card .input,
+checkout-modal .input,
 checkout-shippingaddress .input,
 login .input,
 orders .input,
@@ -563,6 +599,7 @@ shippingaddress .input{
 cart .input.input.input,
 checkout .input.input.input,
 checkout-card .input.input.input,
+checkout-modal .input.input.input,
 checkout-shippingaddress .input.input.input,
 login .input.input.input,
 orders .input.input.input,
@@ -574,6 +611,7 @@ shippingaddress .input.input.input,
 cart .input .input.input,
 checkout .input .input.input,
 checkout-card .input .input.input,
+checkout-modal .input .input.input,
 checkout-shippingaddress .input .input.input,
 login .input .input.input,
 orders .input .input.input,
@@ -589,6 +627,7 @@ shippingaddress .input .input.input{
 cart .input .placeholder,
 checkout .input .placeholder,
 checkout-card .input .placeholder,
+checkout-modal .input .placeholder,
 checkout-shippingaddress .input .placeholder,
 login .input .placeholder,
 orders .input .placeholder,
@@ -608,6 +647,7 @@ shippingaddress .input .placeholder{
 cart .input .invalid ~ .placeholder,
 checkout .input .invalid ~ .placeholder,
 checkout-card .input .invalid ~ .placeholder,
+checkout-modal .input .invalid ~ .placeholder,
 checkout-shippingaddress .input .invalid ~ .placeholder,
 login .input .invalid ~ .placeholder,
 orders .input .invalid ~ .placeholder,
@@ -621,6 +661,7 @@ shippingaddress .input .invalid ~ .placeholder{
 cart .input .error,
 checkout .input .error,
 checkout-card .input .error,
+checkout-modal .input .error,
 checkout-shippingaddress .input .error,
 login .input .error,
 orders .input .error,
@@ -639,6 +680,7 @@ shippingaddress .input .error{
 cart .input input:focus ~ .placeholder,
 checkout .input input:focus ~ .placeholder,
 checkout-card .input input:focus ~ .placeholder,
+checkout-modal .input input:focus ~ .placeholder,
 checkout-shippingaddress .input input:focus ~ .placeholder,
 login .input input:focus ~ .placeholder,
 orders .input input:focus ~ .placeholder,
@@ -650,6 +692,7 @@ shippingaddress .input input:focus ~ .placeholder,
 cart .input input:hover ~ .placeholder,
 checkout .input input:hover ~ .placeholder,
 checkout-card .input input:hover ~ .placeholder,
+checkout-modal .input input:hover ~ .placeholder,
 checkout-shippingaddress .input input:hover ~ .placeholder,
 login .input input:hover ~ .placeholder,
 orders .input input:hover ~ .placeholder,
@@ -661,6 +704,7 @@ shippingaddress .input input:hover ~ .placeholder,
 cart .input .placeholder.small,
 checkout .input .placeholder.small,
 checkout-card .input .placeholder.small,
+checkout-modal .input .placeholder.small,
 checkout-shippingaddress .input .placeholder.small,
 login .input .placeholder.small,
 orders .input .placeholder.small,
@@ -676,6 +720,7 @@ shippingaddress .input .placeholder.small{
 cart .input *:disabled,
 checkout .input *:disabled,
 checkout-card .input *:disabled,
+checkout-modal .input *:disabled,
 checkout-shippingaddress .input *:disabled,
 login .input *:disabled,
 orders .input *:disabled,
@@ -687,6 +732,7 @@ shippingaddress .input *:disabled,
 cart .input .disabled,
 checkout .input .disabled,
 checkout-card .input .disabled,
+checkout-modal .input .disabled,
 checkout-shippingaddress .input .disabled,
 login .input .disabled,
 orders .input .disabled,
@@ -700,6 +746,7 @@ shippingaddress .input .disabled{
 cart .input input,
 checkout .input input,
 checkout-card .input input,
+checkout-modal .input input,
 checkout-shippingaddress .input input,
 login .input input,
 orders .input input,
@@ -716,6 +763,7 @@ shippingaddress .input input{
 cart .input input:-moz-placeholder,
 checkout .input input:-moz-placeholder,
 checkout-card .input input:-moz-placeholder,
+checkout-modal .input input:-moz-placeholder,
 checkout-shippingaddress .input input:-moz-placeholder,
 login .input input:-moz-placeholder,
 orders .input input:-moz-placeholder,
@@ -729,6 +777,7 @@ shippingaddress .input input:-moz-placeholder{
 cart .input input::-moz-placeholder,
 checkout .input input::-moz-placeholder,
 checkout-card .input input::-moz-placeholder,
+checkout-modal .input input::-moz-placeholder,
 checkout-shippingaddress .input input::-moz-placeholder,
 login .input input::-moz-placeholder,
 orders .input input::-moz-placeholder,
@@ -742,6 +791,7 @@ shippingaddress .input input::-moz-placeholder{
 cart .input input:-ms-input-placeholder,
 checkout .input input:-ms-input-placeholder,
 checkout-card .input input:-ms-input-placeholder,
+checkout-modal .input input:-ms-input-placeholder,
 checkout-shippingaddress .input input:-ms-input-placeholder,
 login .input input:-ms-input-placeholder,
 orders .input input:-ms-input-placeholder,
@@ -755,6 +805,7 @@ shippingaddress .input input:-ms-input-placeholder{
 cart .input input::-webkit-input-placeholder,
 checkout .input input::-webkit-input-placeholder,
 checkout-card .input input::-webkit-input-placeholder,
+checkout-modal .input input::-webkit-input-placeholder,
 checkout-shippingaddress .input input::-webkit-input-placeholder,
 login .input input::-webkit-input-placeholder,
 orders .input input::-webkit-input-placeholder,
@@ -768,6 +819,7 @@ shippingaddress .input input::-webkit-input-placeholder{
 cart .input input[type=text],
 checkout .input input[type=text],
 checkout-card .input input[type=text],
+checkout-modal .input input[type=text],
 checkout-shippingaddress .input input[type=text],
 login .input input[type=text],
 orders .input input[type=text],
@@ -779,6 +831,7 @@ shippingaddress .input input[type=text],
 cart .input input[type=password],
 checkout .input input[type=password],
 checkout-card .input input[type=password],
+checkout-modal .input input[type=password],
 checkout-shippingaddress .input input[type=password],
 login .input input[type=password],
 orders .input input[type=password],
@@ -797,6 +850,7 @@ shippingaddress .input input[type=password]{
 cart .input textarea,
 checkout .input textarea,
 checkout-card .input textarea,
+checkout-modal .input textarea,
 checkout-shippingaddress .input textarea,
 login .input textarea,
 orders .input textarea,
@@ -813,6 +867,7 @@ shippingaddress .input textarea{
 cart .input input[type=text],
 checkout .input input[type=text],
 checkout-card .input input[type=text],
+checkout-modal .input input[type=text],
 checkout-shippingaddress .input input[type=text],
 login .input input[type=text],
 orders .input input[type=text],
@@ -824,6 +879,7 @@ shippingaddress .input input[type=text],
 cart .input input[type=password],
 checkout .input input[type=password],
 checkout-card .input input[type=password],
+checkout-modal .input input[type=password],
 checkout-shippingaddress .input input[type=password],
 login .input input[type=password],
 orders .input input[type=password],
@@ -835,6 +891,7 @@ shippingaddress .input input[type=password],
 cart .input textarea,
 checkout .input textarea,
 checkout-card .input textarea,
+checkout-modal .input textarea,
 checkout-shippingaddress .input textarea,
 login .input textarea,
 orders .input textarea,
@@ -849,6 +906,7 @@ shippingaddress .input textarea{
 cart .input.input.input,
 checkout .input.input.input,
 checkout-card .input.input.input,
+checkout-modal .input.input.input,
 checkout-shippingaddress .input.input.input,
 login .input.input.input,
 orders .input.input.input,
@@ -860,6 +918,7 @@ shippingaddress .input.input.input,
 cart .input .input.input,
 checkout .input .input.input,
 checkout-card .input .input.input,
+checkout-modal .input .input.input,
 checkout-shippingaddress .input .input.input,
 login .input .input.input,
 orders .input .input.input,
@@ -875,6 +934,7 @@ shippingaddress .input .input.input{
 cart .input.input.input .invalid,
 checkout .input.input.input .invalid,
 checkout-card .input.input.input .invalid,
+checkout-modal .input.input.input .invalid,
 checkout-shippingaddress .input.input.input .invalid,
 login .input.input.input .invalid,
 orders .input.input.input .invalid,
@@ -886,6 +946,7 @@ shippingaddress .input.input.input .invalid,
 cart .input .input.input .invalid,
 checkout .input .input.input .invalid,
 checkout-card .input .input.input .invalid,
+checkout-modal .input .input.input .invalid,
 checkout-shippingaddress .input .input.input .invalid,
 login .input .input.input .invalid,
 orders .input .input.input .invalid,
@@ -899,6 +960,7 @@ shippingaddress .input .input.input .invalid{
 cart .checkbox,
 checkout .checkbox,
 checkout-card .checkbox,
+checkout-modal .checkbox,
 checkout-shippingaddress .checkbox,
 login .checkbox,
 orders .checkbox,
@@ -912,6 +974,7 @@ shippingaddress .checkbox{
 cart .checkbox label,
 checkout .checkbox label,
 checkout-card .checkbox label,
+checkout-modal .checkbox label,
 checkout-shippingaddress .checkbox label,
 login .checkbox label,
 orders .checkbox label,
@@ -928,6 +991,7 @@ shippingaddress .checkbox label{
 cart .checkbox [type="checkbox"]:not(:checked),
 checkout .checkbox [type="checkbox"]:not(:checked),
 checkout-card .checkbox [type="checkbox"]:not(:checked),
+checkout-modal .checkbox [type="checkbox"]:not(:checked),
 checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked),
 login .checkbox [type="checkbox"]:not(:checked),
 orders .checkbox [type="checkbox"]:not(:checked),
@@ -939,6 +1003,7 @@ shippingaddress .checkbox [type="checkbox"]:not(:checked),
 cart .checkbox [type="checkbox"]:checked,
 checkout .checkbox [type="checkbox"]:checked,
 checkout-card .checkbox [type="checkbox"]:checked,
+checkout-modal .checkbox [type="checkbox"]:checked,
 checkout-shippingaddress .checkbox [type="checkbox"]:checked,
 login .checkbox [type="checkbox"]:checked,
 orders .checkbox [type="checkbox"]:checked,
@@ -953,6 +1018,7 @@ shippingaddress .checkbox [type="checkbox"]:checked{
 cart .checkbox [type="checkbox"]:not(:checked) + label,
 checkout .checkbox [type="checkbox"]:not(:checked) + label,
 checkout-card .checkbox [type="checkbox"]:not(:checked) + label,
+checkout-modal .checkbox [type="checkbox"]:not(:checked) + label,
 checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked) + label,
 login .checkbox [type="checkbox"]:not(:checked) + label,
 orders .checkbox [type="checkbox"]:not(:checked) + label,
@@ -964,6 +1030,7 @@ shippingaddress .checkbox [type="checkbox"]:not(:checked) + label,
 cart .checkbox [type="checkbox"]:checked + label,
 checkout .checkbox [type="checkbox"]:checked + label,
 checkout-card .checkbox [type="checkbox"]:checked + label,
+checkout-modal .checkbox [type="checkbox"]:checked + label,
 checkout-shippingaddress .checkbox [type="checkbox"]:checked + label,
 login .checkbox [type="checkbox"]:checked + label,
 orders .checkbox [type="checkbox"]:checked + label,
@@ -979,6 +1046,7 @@ shippingaddress .checkbox [type="checkbox"]:checked + label{
 cart .checkbox [type="checkbox"]:not(:checked) + label:before,
 checkout .checkbox [type="checkbox"]:not(:checked) + label:before,
 checkout-card .checkbox [type="checkbox"]:not(:checked) + label:before,
+checkout-modal .checkbox [type="checkbox"]:not(:checked) + label:before,
 checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:before,
 login .checkbox [type="checkbox"]:not(:checked) + label:before,
 orders .checkbox [type="checkbox"]:not(:checked) + label:before,
@@ -990,6 +1058,7 @@ shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:before,
 cart .checkbox [type="checkbox"]:checked + label:before,
 checkout .checkbox [type="checkbox"]:checked + label:before,
 checkout-card .checkbox [type="checkbox"]:checked + label:before,
+checkout-modal .checkbox [type="checkbox"]:checked + label:before,
 checkout-shippingaddress .checkbox [type="checkbox"]:checked + label:before,
 login .checkbox [type="checkbox"]:checked + label:before,
 orders .checkbox [type="checkbox"]:checked + label:before,
@@ -1009,6 +1078,7 @@ shippingaddress .checkbox [type="checkbox"]:checked + label:before{
 cart .checkbox [type="checkbox"]:not(:checked) + label:after,
 checkout .checkbox [type="checkbox"]:not(:checked) + label:after,
 checkout-card .checkbox [type="checkbox"]:not(:checked) + label:after,
+checkout-modal .checkbox [type="checkbox"]:not(:checked) + label:after,
 checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:after,
 login .checkbox [type="checkbox"]:not(:checked) + label:after,
 orders .checkbox [type="checkbox"]:not(:checked) + label:after,
@@ -1020,6 +1090,7 @@ shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:after,
 cart .checkbox [type="checkbox"]:checked + label:after,
 checkout .checkbox [type="checkbox"]:checked + label:after,
 checkout-card .checkbox [type="checkbox"]:checked + label:after,
+checkout-modal .checkbox [type="checkbox"]:checked + label:after,
 checkout-shippingaddress .checkbox [type="checkbox"]:checked + label:after,
 login .checkbox [type="checkbox"]:checked + label:after,
 orders .checkbox [type="checkbox"]:checked + label:after,
@@ -1041,6 +1112,7 @@ shippingaddress .checkbox [type="checkbox"]:checked + label:after{
 cart .checkbox [type="checkbox"]:not(:checked) + label:after,
 checkout .checkbox [type="checkbox"]:not(:checked) + label:after,
 checkout-card .checkbox [type="checkbox"]:not(:checked) + label:after,
+checkout-modal .checkbox [type="checkbox"]:not(:checked) + label:after,
 checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:after,
 login .checkbox [type="checkbox"]:not(:checked) + label:after,
 orders .checkbox [type="checkbox"]:not(:checked) + label:after,
@@ -1056,6 +1128,7 @@ shippingaddress .checkbox [type="checkbox"]:not(:checked) + label:after{
 cart .checkbox [type="checkbox"]:checked + label:after,
 checkout .checkbox [type="checkbox"]:checked + label:after,
 checkout-card .checkbox [type="checkbox"]:checked + label:after,
+checkout-modal .checkbox [type="checkbox"]:checked + label:after,
 checkout-shippingaddress .checkbox [type="checkbox"]:checked + label:after,
 login .checkbox [type="checkbox"]:checked + label:after,
 orders .checkbox [type="checkbox"]:checked + label:after,
@@ -1071,6 +1144,7 @@ shippingaddress .checkbox [type="checkbox"]:checked + label:after{
 cart .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
 checkout .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
 checkout-card .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+checkout-modal .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
 checkout-shippingaddress .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
 login .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
 orders .checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
@@ -1082,6 +1156,7 @@ shippingaddress .checkbox [type="checkbox"]:disabled:not(:checked) + label:befor
 cart .checkbox [type="checkbox"]:disabled:checked + label:before,
 checkout .checkbox [type="checkbox"]:disabled:checked + label:before,
 checkout-card .checkbox [type="checkbox"]:disabled:checked + label:before,
+checkout-modal .checkbox [type="checkbox"]:disabled:checked + label:before,
 checkout-shippingaddress .checkbox [type="checkbox"]:disabled:checked + label:before,
 login .checkbox [type="checkbox"]:disabled:checked + label:before,
 orders .checkbox [type="checkbox"]:disabled:checked + label:before,
@@ -1097,6 +1172,7 @@ shippingaddress .checkbox [type="checkbox"]:disabled:checked + label:before{
 cart .checkbox [type="checkbox"]:disabled:checked + label:after,
 checkout .checkbox [type="checkbox"]:disabled:checked + label:after,
 checkout-card .checkbox [type="checkbox"]:disabled:checked + label:after,
+checkout-modal .checkbox [type="checkbox"]:disabled:checked + label:after,
 checkout-shippingaddress .checkbox [type="checkbox"]:disabled:checked + label:after,
 login .checkbox [type="checkbox"]:disabled:checked + label:after,
 orders .checkbox [type="checkbox"]:disabled:checked + label:after,
@@ -1110,6 +1186,7 @@ shippingaddress .checkbox [type="checkbox"]:disabled:checked + label:after{
 cart .checkbox [type="checkbox"]:disabled + label,
 checkout .checkbox [type="checkbox"]:disabled + label,
 checkout-card .checkbox [type="checkbox"]:disabled + label,
+checkout-modal .checkbox [type="checkbox"]:disabled + label,
 checkout-shippingaddress .checkbox [type="checkbox"]:disabled + label,
 login .checkbox [type="checkbox"]:disabled + label,
 orders .checkbox [type="checkbox"]:disabled + label,
@@ -1123,6 +1200,7 @@ shippingaddress .checkbox [type="checkbox"]:disabled + label{
 cart .checkbox [type="checkbox"]:checked:focus + label:before,
 checkout .checkbox [type="checkbox"]:checked:focus + label:before,
 checkout-card .checkbox [type="checkbox"]:checked:focus + label:before,
+checkout-modal .checkbox [type="checkbox"]:checked:focus + label:before,
 checkout-shippingaddress .checkbox [type="checkbox"]:checked:focus + label:before,
 login .checkbox [type="checkbox"]:checked:focus + label:before,
 orders .checkbox [type="checkbox"]:checked:focus + label:before,
@@ -1134,6 +1212,7 @@ shippingaddress .checkbox [type="checkbox"]:checked:focus + label:before,
 cart .checkbox [type="checkbox"]:not(:checked):focus + label:before,
 checkout .checkbox [type="checkbox"]:not(:checked):focus + label:before,
 checkout-card .checkbox [type="checkbox"]:not(:checked):focus + label:before,
+checkout-modal .checkbox [type="checkbox"]:not(:checked):focus + label:before,
 checkout-shippingaddress .checkbox [type="checkbox"]:not(:checked):focus + label:before,
 login .checkbox [type="checkbox"]:not(:checked):focus + label:before,
 orders .checkbox [type="checkbox"]:not(:checked):focus + label:before,
@@ -1147,6 +1226,7 @@ shippingaddress .checkbox [type="checkbox"]:not(:checked):focus + label:before{
 cart .checkbox label:hover:before,
 checkout .checkbox label:hover:before,
 checkout-card .checkbox label:hover:before,
+checkout-modal .checkbox label:hover:before,
 checkout-shippingaddress .checkbox label:hover:before,
 login .checkbox label:hover:before,
 orders .checkbox label:hover:before,
@@ -1160,6 +1240,7 @@ shippingaddress .checkbox label:hover:before{
 cart:not(.ready) > *,
 checkout:not(.ready) > *,
 checkout-card:not(.ready) > *,
+checkout-modal:not(.ready) > *,
 checkout-shippingaddress:not(.ready) > *,
 login:not(.ready) > *,
 orders:not(.ready) > *,
@@ -1173,6 +1254,7 @@ shippingaddress:not(.ready) > *{
 cart > *,
 checkout > *,
 checkout-card > *,
+checkout-modal > *,
 checkout-shippingaddress > *,
 login > *,
 orders > *,
@@ -1186,6 +1268,7 @@ shippingaddress > *{
 cart,
 checkout,
 checkout-card,
+checkout-modal,
 checkout-shippingaddress,
 login,
 orders,
@@ -1200,6 +1283,7 @@ shippingaddress{
 cart .input,
 checkout .input,
 checkout-card .input,
+checkout-modal .input,
 checkout-shippingaddress .input,
 login .input,
 orders .input,
@@ -1213,6 +1297,7 @@ shippingaddress .input{
 cart h2,
 checkout h2,
 checkout-card h2,
+checkout-modal h2,
 checkout-shippingaddress h2,
 login h2,
 orders h2,
@@ -1228,6 +1313,7 @@ shippingaddress h2{
 cart .button,
 checkout .button,
 checkout-card .button,
+checkout-modal .button,
 checkout-shippingaddress .button,
 login .button,
 orders .button,
@@ -1239,6 +1325,7 @@ shippingaddress .button,
 cart button,
 checkout button,
 checkout-card button,
+checkout-modal button,
 checkout-shippingaddress button,
 login button,
 orders button,
@@ -1260,6 +1347,7 @@ shippingaddress button{
 cart .button.submit,
 checkout .button.submit,
 checkout-card .button.submit,
+checkout-modal .button.submit,
 checkout-shippingaddress .button.submit,
 login .button.submit,
 orders .button.submit,
@@ -1271,6 +1359,7 @@ shippingaddress .button.submit,
 cart button.submit,
 checkout button.submit,
 checkout-card button.submit,
+checkout-modal button.submit,
 checkout-shippingaddress button.submit,
 login button.submit,
 orders button.submit,
@@ -1282,6 +1371,7 @@ shippingaddress button.submit,
 cart .button[type=submit],
 checkout .button[type=submit],
 checkout-card .button[type=submit],
+checkout-modal .button[type=submit],
 checkout-shippingaddress .button[type=submit],
 login .button[type=submit],
 orders .button[type=submit],
@@ -1293,6 +1383,7 @@ shippingaddress .button[type=submit],
 cart button[type=submit],
 checkout button[type=submit],
 checkout-card button[type=submit],
+checkout-modal button[type=submit],
 checkout-shippingaddress button[type=submit],
 login button[type=submit],
 orders button[type=submit],
@@ -1310,6 +1401,7 @@ shippingaddress button[type=submit]{
 cart button,
 checkout button,
 checkout-card button,
+checkout-modal button,
 checkout-shippingaddress button,
 login button,
 orders button,
@@ -1699,7 +1791,6 @@ cart .product-quantity-container .item{
 }
 cart .product-description{
   line-height:1em;
-  padding-left:20px;
   display:inline-block;
   vertical-align:top;
   width:90%;
@@ -1718,6 +1809,7 @@ cart .product-image-container{
 }
 cart .product-image-container img{
   max-height:3.5em;
+  padding-right:20px;
 }
 cart .product-text-container{
   width:40%;
@@ -1848,15 +1940,23 @@ checkout-shippingaddress{
   padding:20px;
   background-color:#eee;
 }
-checkout .checkout-section,
-checkout-card .checkout-section,
-checkout-shippingaddress .checkout-section{
+checkout button,
+checkout-card button,
+checkout-shippingaddress button,
+checkout .button,
+checkout-card .button,
+checkout-shippingaddress .button{
+  border-width:0;
+}
+checkout div:not(.error),
+checkout-card div:not(.error),
+checkout-shippingaddress div:not(.error){
   margin-bottom:20px;
   position:relative;
 }
-checkout .checkout-section .secured-text,
-checkout-card .checkout-section .secured-text,
-checkout-shippingaddress .checkout-section .secured-text{
+checkout div:not(.error) .secured-text,
+checkout-card div:not(.error) .secured-text,
+checkout-shippingaddress div:not(.error) .secured-text{
   position:relative;
   right:0;
   height:0;
@@ -1864,9 +1964,9 @@ checkout-shippingaddress .checkout-section .secured-text{
   display:block;
   float:right;
 }
-checkout .checkout-section .secured-text .lock-icon,
-checkout-card .checkout-section .secured-text .lock-icon,
-checkout-shippingaddress .checkout-section .secured-text .lock-icon{
+checkout div:not(.error) .secured-text .lock-icon,
+checkout-card div:not(.error) .secured-text .lock-icon,
+checkout-shippingaddress div:not(.error) .secured-text .lock-icon{
   height:16px;
   position:relative;
   top:2px;
@@ -2076,38 +2176,33 @@ checkout-shippingaddress .stripe-logo{
 .checkout-content checkout-card lineitems{
   margin-top:20px;
 }
-.checkout-content cart lineitems .product-delete,
-.checkout-content checkout lineitems .product-delete,
-.checkout-content checkout-card lineitems .product-delete{
-  display:none;
-}
 .checkout-content cart .secured-text,
 .checkout-content checkout .secured-text,
 .checkout-content checkout-card .secured-text{
   top:calc(-1.5em - 10px);
 }
-.checkout-content .checkout-form .checkout-form-parts{
+.checkout-content .checkout-form > *{
   width:300%;
   transition:-webkit-transform 500ms ease-in-out;
   transition:transform 500ms ease-in-out;
   transition:transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
-.checkout-content .checkout-form .checkout-form-parts .checkout-form-part{
+.checkout-content .checkout-form > * .checkout-form-part{
   width:calc(99.9% * 1/3);
 }
-.checkout-content .checkout-form .checkout-form-parts .checkout-form-part:nth-child(1n){
+.checkout-content .checkout-form > * .checkout-form-part:nth-child(1n){
   float:left;
   margin-right:0;
   clear:none;
 }
-.checkout-content .checkout-form .checkout-form-parts .checkout-form-part:last-child{
+.checkout-content .checkout-form > * .checkout-form-part:last-child{
   margin-right:0;
 }
-.checkout-content .checkout-form .checkout-form-parts .checkout-form-part:nth-child(3n){
+.checkout-content .checkout-form > * .checkout-form-part:nth-child(3n){
   margin-right:0;
   float:right;
 }
-.checkout-content .checkout-form .checkout-form-parts .checkout-form-part:nth-child(3n + 1){
+.checkout-content .checkout-form > * .checkout-form-part:nth-child(3n + 1){
   clear:both;
 }
 .checkout-content .checkout-form.step-1 .checkout-form-part:not(:nth-child(1)){
@@ -2356,6 +2451,16 @@ footer .hanzo h1{
 #page-index .example .image >checkout{
   float:left;
 }
+section{
+  padding:10vh 20vw;
+}
+login *,
+register *,
+reset-password *,
+reset-password-complete *{
+  color:#fff !important;
+  border-color:#fff !important;
+}
 @media only screen and (max-width: 400px){
 
   .hero{
@@ -2365,6 +2470,7 @@ footer .hanzo h1{
   cart .secured-text span,
   checkout .secured-text span,
   checkout-card .secured-text span,
+  checkout-modal .secured-text span,
   checkout-shippingaddress .secured-text span,
   login .secured-text span,
   orders .secured-text span,
