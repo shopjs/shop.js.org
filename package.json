@@ -11,7 +11,7 @@
     "akasha": "0.1.9",
     "debounce": "1.0.2",
     "prismjs": "1.8.1",
-    "shop.js": "2.2.1",
+    "shop.js": "2.2.2",
     "zepto-modules": "1.0.1"
   },
   "devDependencies": {
