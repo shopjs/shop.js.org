@@ -8,15 +8,15 @@
   "author": "Hanzo, Inc <hi@hanzo.io>",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "akasha": "0.1.9",
+    "akasha": "0.1.10",
     "debounce": "1.0.2",
     "prismjs": "1.8.1",
     "shop.js": "2.2.2",
     "zepto-modules": "1.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "7.1.4",
-    "bebop": "1.12.5",
+    "autoprefixer": "7.1.5",
+    "bebop": "1.12.7",
     "clean-css": "4.1.9",
     "coffee-script": "1.12.7",
     "css-mqpacker": "6.0.1",
@@ -30,7 +30,7 @@
     "reeeset": "0.0.8",
     "rucksack-css": "1.0.2",
     "rupture": "0.6.2",
-    "sake-bundle": "0.6.0",
+    "sake-bundle": "0.6.1",
     "sake-cli": "0.5.21",
     "sake-linked": "0.1.2",
     "sake-outdated": "0.1.28",
