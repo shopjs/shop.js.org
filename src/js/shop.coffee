@@ -1,4 +1,4 @@
-import Shop from 'shop.js'
+import Shop from 'shop.js/src'
 import store from 'akasha'
 
 m
