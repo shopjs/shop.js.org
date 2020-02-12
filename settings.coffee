@@ -1,4 +1,4 @@
-url = 'https://hanzo.io'
+url = 'https://shop.js.org'
 
 description = """
   Exactly Every Ecommerce Element Everyone Expects
@@ -14,7 +14,7 @@ module.exports =
     title:     'Shop.js'
     name:      'shop.js'
     url:       url
-    copyright: '© Hanzo 2017'
+    copyright: '© Hanzo'
 
   meta:
     description: description
@@ -22,13 +22,13 @@ module.exports =
     facebook:
       appid:       '1648878842071733'
       description: description
-      image:       'https://getshopjs.com/img/logo.png'
-      title:       'Get Shop.js'
+      image:       'https://shop.js.org/img/logo.png'
+      title:       'Shop.js'
 
     twitter:
       description: description
-      image:       'https://getshopjs.com/img/logo.png'
-      title:       'Get Shop.js'
+      image:       'https://shop.js.org/img/logo.png'
+      title:       'Shop.js'
 
   social:
     twitter:

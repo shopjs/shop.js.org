@@ -1,11 +1,11 @@
 {
-  "name": "getshopjs.com",
+  "name": "shop.js.org",
   "version": "0.1.0",
-  "description": "Shop.js Website",
-  "homepage": "http://github.com/hanzo-io/getshopjs.com",
-  "repository": "ssh://github.com/hanzo-io/getshopjs.com",
-  "bugs": "http://github.com/hanzo-io/getshopjs.com/issues",
-  "author": "Hanzo, Inc <hi@hanzo.io>",
+  "description": "Homepage for Shop.js",
+  "homepage": "http://github.com/shopjs/shop.js.org",
+  "repository": "ssh://github.com/shopjs/shop.js.org",
+  "bugs": "http://github.com/hanzoai/shop.js.org/issues",
+  "author": "Hanzo, Inc <hi@hanzo.ai>",
   "license": "BSD-3-Clause",
   "dependencies": {
     "akasha": "0.1.10",
