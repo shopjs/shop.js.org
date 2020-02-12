@@ -18,7 +18,7 @@
   "devDependencies": {
     "autoprefixer": "7.2.3",
     "bebop": "1.12.8",
-    "clean-css": "4.1.9",
+    "clean-css": "4.2.3",
     "coffee-script": "1.12.7",
     "css-mqpacker": "6.0.1",
     "esmangle": "1.0.1",
