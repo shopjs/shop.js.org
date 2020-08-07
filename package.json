@@ -10,7 +10,7 @@
   "dependencies": {
     "akasha": "0.1.10",
     "debounce": "1.1.0",
-    "prismjs": "1.15.0",
+    "prismjs": "1.21.0",
     "qrcode": "1.2.0",
     "shop.js": "2.2.46",
     "zepto-modules": "1.0.1"
